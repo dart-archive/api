@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lsm9ds1 library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="lsm9ds1 library API docs, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">i2c</a></li>
+                  <li class="self-crumb">lsm9ds1</li>
+              </ol>
+              <div class="self-name">lsm9ds1</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
+    </nav>
+
+    <div class="container masthead">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">i2c</a></li>
+              <li class="self-crumb">lsm9ds1</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">library</div> lsm9ds1
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="lsm9ds1/lsm9ds1-library.html#enums">Enums</a></li>
+              <li><a href="lsm9ds1/lsm9ds1-library.html#classes">Classes</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">i2c</a></h5>
+
+    <ol>
+      <li class="section-title"><a href="index.html">Libraries</a></li>
+      <li><a href="hts221/hts221-library.html">hts221</a></li>
+      <li><a href="i2c/i2c-library.html">i2c</a></li>
+      <li><a href="lps25h/lps25h-library.html">lps25h</a></li>
+      <li><a href="lsm9ds1/lsm9ds1-library.html">lsm9ds1</a></li>
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="desc markdown">
+    
+          <p>API for LSM9DS1 "iNEMO inertial module: 3D accelerometer, 3D gyroscope,
+3D magnetometer" chip using the I2C bus.</p>
+<p>Currently this has only been tested with a Raspberry Pi 2 and the Sense HAT.</p>
+<p>The following sample code show how to access the LSM9DS1 on a Raspberry Pi 2
+Sense HAT.</p>
+<pre class="prettyprint lang-dart"><code>import 'package:i2c/i2c.dart';
+import 'package:i2c/devices/lsm9ds1.dart';
+
+main() {
+  const i2CBusNumber = 1;  // Raspberry Pi 2 use I2C bus number 1.
+  var busAddress = new I2CBusAddress(i2CBusNumber);
+  var b = busAddress.open();
+  var lsm9ds1 = new LSM9DS1(new I2CDevice(0x6a, b), new I2CDevice(0x1c, b));
+  lsm9ds1.powerOn();
+  while (true) {
+    if (lsm9ds1.hasAccelMeasurement()) {
+      var accel = lsm9ds1.readAccel();
+      print('pitch: ${accel.pitch}, roll: ${accel.roll}');
+    }
+    if (lsm9ds1.hasGyroMeasurement()) {
+      var gyro = lsm9ds1.readGyro();
+      print(gyro);
+    }
+    if (lsm9ds1.hasMagnetMeasurement()) {
+      var magnet = lsm9ds1.readMagnet();
+      print(magnet);
+    }
+  }
+}
+</code></pre>
+<p>For the datasheet for the LSM9DS1 see:
+http://www.st.com/web/en/resource/technical/document/datasheet/DM00103319.pdf</p>
+    
+    </section>
+
+
+
+
+
+    <section class="summary offset-anchor" id="enums">
+        <h2>Enums</h2>
+
+        <dl>
+            <dt id="AccelBandwidth">
+                <a class="" href="lsm9ds1/AccelBandwidth-class.html">AccelBandwidth</a>
+            </dt>
+            <dd>
+                <p>Bandwidth for the accelerometer.</p>
+            </dd>
+            <dt id="AccelOutputRate">
+                <a class="" href="lsm9ds1/AccelOutputRate-class.html">AccelOutputRate</a>
+            </dt>
+            <dd>
+                <p>Rate of output from the accelerometer.</p>
+            </dd>
+            <dt id="AccelScale">
+                <a class="" href="lsm9ds1/AccelScale-class.html">AccelScale</a>
+            </dt>
+            <dd>
+                <p>Scale for the accelerometer.</p>
+            </dd>
+            <dt id="GyroBandwidth">
+                <a class="" href="lsm9ds1/GyroBandwidth-class.html">GyroBandwidth</a>
+            </dt>
+            <dd>
+                <p>Bandwidth for the gyroscope.</p>
+            </dd>
+            <dt id="GyroOutputRate">
+                <a class="" href="lsm9ds1/GyroOutputRate-class.html">GyroOutputRate</a>
+            </dt>
+            <dd>
+                <p>Rates of output from the gyroscope.</p>
+            </dd>
+            <dt id="GyroScale">
+                <a class="" href="lsm9ds1/GyroScale-class.html">GyroScale</a>
+            </dt>
+            <dd>
+                <p>Scales for the gyroscope.</p>
+            </dd>
+            <dt id="MagnetMode">
+                <a class="" href="lsm9ds1/MagnetMode-class.html">MagnetMode</a>
+            </dt>
+            <dd>
+                <p>Mode for the magnetometer.</p>
+            </dd>
+            <dt id="MagnetOutputRate">
+                <a class="" href="lsm9ds1/MagnetOutputRate-class.html">MagnetOutputRate</a>
+            </dt>
+            <dd>
+                <p>Rate of output from the magnetometer.</p>
+            </dd>
+            <dt id="MagnetScale">
+                <a class="" href="lsm9ds1/MagnetScale-class.html">MagnetScale</a>
+            </dt>
+            <dd>
+                <p>Scale for the magnetometer.</p>
+            </dd>
+        </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="classes">
+        <h2>Classes</h2>
+
+        <dl>
+            <dt id="AccelMeasurement">
+                <span class="name "><a class="" href="lsm9ds1/AccelMeasurement-class.html">AccelMeasurement</a></span>
+            </dt>
+            <dd>
+                <p>Accelerometer measurement.<a href="lsm9ds1/AccelMeasurement-class.html">&hellip;</a>
+</p>
+            </dd>
+            <dt id="GyroMeasurement">
+                <span class="name "><a class="" href="lsm9ds1/GyroMeasurement-class.html">GyroMeasurement</a></span>
+            </dt>
+            <dd>
+                <p>Gyroscope measurement.<a href="lsm9ds1/GyroMeasurement-class.html">&hellip;</a>
+</p>
+            </dd>
+            <dt id="LSM9DS1">
+                <span class="name "><a class="" href="lsm9ds1/LSM9DS1-class.html">LSM9DS1</a></span>
+            </dt>
+            <dd>
+                <p>Accelerometer, gyroscope and magnetometer.</p>
+            </dd>
+            <dt id="MagnetMeasurement">
+                <span class="name "><a class="" href="lsm9ds1/MagnetMeasurement-class.html">MagnetMeasurement</a></span>
+            </dt>
+            <dd>
+                <p>Magnetometer measurement.<a href="lsm9ds1/MagnetMeasurement-class.html">&hellip;</a>
+</p>
+            </dd>
+            <dt id="Measurement">
+                <span class="name "><a class="" href="lsm9ds1/Measurement-class.html">Measurement</a></span>
+            </dt>
+            <dd>
+                <p></p>
+            </dd>
+        </dl>
+    </section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <h5>lsm9ds1</h5>
+    <ol>
+    
+    
+    
+    
+      <li class="section-title"><a href="lsm9ds1/lsm9ds1-library.html#enums">Enums</a></li>
+      <li><a class="" href="lsm9ds1/AccelBandwidth-class.html">AccelBandwidth</a></li>
+      <li><a class="" href="lsm9ds1/AccelOutputRate-class.html">AccelOutputRate</a></li>
+      <li><a class="" href="lsm9ds1/AccelScale-class.html">AccelScale</a></li>
+      <li><a class="" href="lsm9ds1/GyroBandwidth-class.html">GyroBandwidth</a></li>
+      <li><a class="" href="lsm9ds1/GyroOutputRate-class.html">GyroOutputRate</a></li>
+      <li><a class="" href="lsm9ds1/GyroScale-class.html">GyroScale</a></li>
+      <li><a class="" href="lsm9ds1/MagnetMode-class.html">MagnetMode</a></li>
+      <li><a class="" href="lsm9ds1/MagnetOutputRate-class.html">MagnetOutputRate</a></li>
+      <li><a class="" href="lsm9ds1/MagnetScale-class.html">MagnetScale</a></li>
+    
+      <li class="section-title"><a href="lsm9ds1/lsm9ds1-library.html#classes">Classes</a></li>
+      <li><a class="" href="lsm9ds1/AccelMeasurement-class.html">AccelMeasurement</a></li>
+      <li><a class="" href="lsm9ds1/GyroMeasurement-class.html">GyroMeasurement</a></li>
+      <li><a class="" href="lsm9ds1/LSM9DS1-class.html">LSM9DS1</a></li>
+      <li><a class="" href="lsm9ds1/MagnetMeasurement-class.html">MagnetMeasurement</a></li>
+      <li><a class="" href="lsm9ds1/Measurement-class.html">Measurement</a></li>
+    
+    </ol>
+  </div><!--/sidebar-offcanvas-right-->
+
+
+  </div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  i2c 0.1.0
+                </span>
+                &bull;
+                <span class="no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.7.4 -->
+</body>
+
+</html>

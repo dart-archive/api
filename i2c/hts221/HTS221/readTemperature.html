@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>readTemperature method - HTS221 class - hts221 library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="../..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the readTemperature method from the HTS221 class, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">i2c</a></li>
+                  <li><a href="hts221/hts221-library.html">hts221</a></li>
+                  <li><a href="hts221/HTS221-class.html">HTS221</a></li>
+                  <li class="self-crumb">readTemperature</li>
+              </ol>
+              <div class="self-name">readTemperature</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
+    </nav>
+
+    <div class="container masthead">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">i2c</a></li>
+              <li><a href="hts221/hts221-library.html">hts221</a></li>
+              <li><a href="hts221/HTS221-class.html">HTS221</a></li>
+              <li class="self-crumb">readTemperature</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">method</div> readTemperature
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="hts221/HTS221/readTemperature.html#source">Source</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">i2c</a></h5>
+    <h5><a href="hts221/hts221-library.html">hts221</a></h5>
+    <h5><a href="hts221/HTS221-class.html">HTS221</a></h5>
+
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="hts221/HTS221-class.html#instance-properties">Properties</a></li>
+      <li><a class="" href="hts221/HTS221/h0.html">h0</a></li>
+      <li><a class="" href="hts221/HTS221/h0Out.html">h0Out</a></li>
+      <li><a class="" href="hts221/HTS221/h1.html">h1</a></li>
+      <li><a class="" href="hts221/HTS221/h1Out.html">h1Out</a></li>
+      <li><a class="" href="hts221/HTS221/hashCode.html">hashCode</a></li>
+      <li><a class="" href="hts221/HTS221/runtimeType.html">runtimeType</a></li>
+      <li><a class="" href="hts221/HTS221/t0.html">t0</a></li>
+      <li><a class="" href="hts221/HTS221/t0Out.html">t0Out</a></li>
+      <li><a class="" href="hts221/HTS221/t1.html">t1</a></li>
+      <li><a class="" href="hts221/HTS221/t1Out.html">t1Out</a></li>
+    
+      <li class="section-title"><a href="hts221/HTS221-class.html#constructors">Constructors</a></li>
+      <li><a href="hts221/HTS221/HTS221.html">HTS221</a></li>
+    
+      <li class="section-title"><a href="hts221/HTS221-class.html#operators">Operators</a></li>
+      <li><a class="" href="hts221/HTS221/operator_equals.html">operator ==</a></li>
+    
+      <li class="section-title"><a href="hts221/HTS221-class.html#instance-methods">Methods</a></li>
+      <li><a class="" href="hts221/HTS221/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a class="" href="hts221/HTS221/oneShotRead.html">oneShotRead</a></li>
+      <li><a class="" href="hts221/HTS221/powerOff.html">powerOff</a></li>
+      <li><a class="" href="hts221/HTS221/powerOn.html">powerOn</a></li>
+      <li><a class="" href="hts221/HTS221/readHumidity.html">readHumidity</a></li>
+      <li><a class="" href="hts221/HTS221/readTemperature.html">readTemperature</a></li>
+      <li><a class="" href="hts221/HTS221/toString.html">toString</a></li>
+    </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="multi-line-signature">
+        <span class="returntype">double</span>
+        <span class="name ">readTemperature</span>(<wbr>)
+    </section>
+
+    <section class="desc markdown">
+    
+          <p>Read the current temperature value.</p>
+    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2><span>Source</span> </h2>
+      <pre><code class="prettyprint lang-dart">double readTemperature() {
+  var t_out = _signed16(
+      _device.readByte(_tempOutH), _device.readByte(_tempOutL));
+  // Interpolate using the calibration values.
+  return t0 + (t_out - t0Out) * (t1 - t0) / (t1Out - t0Out);
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  </div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  i2c 0.1.0
+                </span>
+                &bull;
+                <span class="no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.7.4 -->
+</body>
+
+</html>

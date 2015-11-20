@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>raspberry_pi.sense_hat library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="raspberry_pi.sense_hat library API docs, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">raspberry_pi</a></li>
+                  <li class="self-crumb">raspberry_pi.sense_hat</li>
+              </ol>
+              <div class="self-name">raspberry_pi.sense_hat</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
+    </nav>
+
+    <div class="container masthead">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">raspberry_pi</a></li>
+              <li class="self-crumb">raspberry_pi.sense_hat</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">library</div> raspberry_pi.sense_hat
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="raspberry_pi.sense_hat/raspberry_pi.sense_hat-library.html#classes">Classes</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">raspberry_pi</a></h5>
+
+    <ol>
+      <li class="section-title"><a href="index.html">Libraries</a></li>
+      <li><a href="raspberry_pi/raspberry_pi-library.html">raspberry_pi</a></li>
+      <li><a href="raspberry_pi.sense_hat/raspberry_pi.sense_hat-library.html">raspberry_pi.sense_hat</a></li>
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="desc markdown">
+    
+          <p>API for accessing the devices on the Raspberry Pi Sense HAT add-on board.
+See: https://www.raspberrypi.org/products/sense-hat/.</p>
+<p>Currently this has only been tested with a Raspberry Pi 2 and the Sense HAT.</p>
+<p>The following sample code show how to access the devices on the Raspberry Pi
+Sense HAT.</p>
+<pre class="prettyprint lang-dart"><code>import 'package:os/os.dart' as os;
+import 'package:raspberry_pi/sense_hat.dart';
+
+void draw(hat, c1, c2, c3) {
+  for (int i = 0; i &lt; 8; i++) {
+    hat.setPixel(i, i, c1);
+    hat.setPixel(i, 7 - i, c1);
+  }
+  for (int i = 0; i &lt; 8; i++) {
+    hat.setPixel(3, i, c2);
+    hat.setPixel(4, i, c2);
+  }
+  for (int i = 0; i &lt; 8; i++) {
+    hat.setPixel(i, 3, c3);
+    hat.setPixel(i, 4, c3);
+  }
+}
+
+main() {
+  var hat = new SenseHat();
+
+  while (true) {
+    draw(hat, Color.red, Color.green, Color.blue);
+    os.sleep(200);
+    draw(hat, Color.green, Color.blue, Color.red);
+    os.sleep(200);
+    draw(hat, Color.blue, Color.red, Color.green);
+    os.sleep(200);
+    var temp = hat.readTemperature();
+    var humidity = hat.readHumidity();
+    var pressure = hat.readPressure();
+    var accel = hat.readAccel();
+    print('${accel.pitch} ${accel.roll} $temp $humidity $pressure');
+  }
+}
+</code></pre>
+    
+    </section>
+
+
+
+
+
+
+    <section class="summary offset-anchor" id="classes">
+        <h2>Classes</h2>
+
+        <dl>
+            <dt id="Color">
+                <span class="name "><a class="" href="raspberry_pi.sense_hat/Color-class.html">Color</a></span>
+            </dt>
+            <dd>
+                <p>Pixel color.</p>
+            </dd>
+            <dt id="SenseHat">
+                <span class="name "><a class="" href="raspberry_pi.sense_hat/SenseHat-class.html">SenseHat</a></span>
+            </dt>
+            <dd>
+                <p>API to the Raspberry Pi Sense HAT add-on board.<a href="raspberry_pi.sense_hat/SenseHat-class.html">&hellip;</a>
+</p>
+            </dd>
+            <dt id="SenseHatLEDArray">
+                <span class="name "><a class="" href="raspberry_pi.sense_hat/SenseHatLEDArray-class.html">SenseHatLEDArray</a></span>
+            </dt>
+            <dd>
+                <p>Sense HAT 8x8 LED array.</p>
+            </dd>
+        </dl>
+    </section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <h5>raspberry_pi.sense_hat</h5>
+    <ol>
+    
+    
+    
+    
+    
+      <li class="section-title"><a href="raspberry_pi.sense_hat/raspberry_pi.sense_hat-library.html#classes">Classes</a></li>
+      <li><a class="" href="raspberry_pi.sense_hat/Color-class.html">Color</a></li>
+      <li><a class="" href="raspberry_pi.sense_hat/SenseHat-class.html">SenseHat</a></li>
+      <li><a class="" href="raspberry_pi.sense_hat/SenseHatLEDArray-class.html">SenseHatLEDArray</a></li>
+    
+    </ol>
+  </div><!--/sidebar-offcanvas-right-->
+
+
+  </div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  raspberry_pi 0.1.0
+                </span>
+                &bull;
+                <span class="no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.7.4 -->
+</body>
+
+</html>
