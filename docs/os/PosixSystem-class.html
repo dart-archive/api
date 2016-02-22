@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PosixSystem class - os library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the PosixSystem class from the os library, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">Dartino_SDK</a></li>
+                  <li><a href="os/os-library.html">os</a></li>
+                  <li class="self-crumb">PosixSystem</li>
+              </ol>
+              <div class="self-name">PosixSystem</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
+    </nav>
+
+    <div class="container masthead">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">Dartino_SDK</a></li>
+              <li><a href="os/os-library.html">os</a></li>
+              <li class="self-crumb">PosixSystem</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">abstract class</div> PosixSystem
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="os/PosixSystem-class.html#instance-properties">Properties</a></li>
+              <li><a href="os/PosixSystem-class.html#constructors">Constructors</a></li>
+              <li><a href="os/PosixSystem-class.html#operators">Operators</a></li>
+              <li><a href="os/PosixSystem-class.html#instance-methods">Methods</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">Dartino_SDK</a></h5>
+    <h5><a href="os/os-library.html">os</a></h5>
+
+    <ol>
+      <li class="section-title"><a href="os/os-library.html#constants">Constants</a></li>
+      <li><a class="" href="os/FD_CLOEXEC.html">FD_CLOEXEC</a></li>
+      <li><a class="" href="os/F_GETFD.html">F_GETFD</a></li>
+      <li><a class="" href="os/F_GETFL.html">F_GETFL</a></li>
+      <li><a class="" href="os/F_SETFD.html">F_SETFD</a></li>
+      <li><a class="" href="os/F_SETFL.html">F_SETFL</a></li>
+      <li><a class="" href="os/notSupported.html">notSupported</a></li>
+      <li><a class="" href="os/SEEK_CUR.html">SEEK_CUR</a></li>
+      <li><a class="" href="os/SEEK_END.html">SEEK_END</a></li>
+      <li><a class="" href="os/SEEK_SET.html">SEEK_SET</a></li>
+      <li><a class="" href="os/SHUT_RD.html">SHUT_RD</a></li>
+      <li><a class="" href="os/SHUT_RDWR.html">SHUT_RDWR</a></li>
+      <li><a class="" href="os/SHUT_WR.html">SHUT_WR</a></li>
+    
+    
+      <li class="section-title"><a href="os/os-library.html#properties">Properties</a></li>
+      <li><a class="" href="os/errnos.html">errnos</a></li>
+      <li><a class="" href="os/sys.html">sys</a></li>
+    
+      <li class="section-title"><a href="os/os-library.html#functions">Functions</a></li>
+      <li><a class="" href="os/errno.html">errno</a></li>
+      <li><a class="" href="os/getSystem.html">getSystem</a></li>
+    
+    
+      <li class="section-title"><a href="os/os-library.html#classes">Classes</a></li>
+      <li><a class="" href="os/Accessor-class.html">Accessor</a></li>
+      <li><a class="" href="os/AddrInfo-class.html">AddrInfo</a></li>
+      <li><a class="" href="os/AndroidAddrInfo-class.html">AndroidAddrInfo</a></li>
+      <li><a class="" href="os/Errnos-class.html">Errnos</a></li>
+      <li><a class="" href="os/FreeRTOSSystem-class.html">FreeRTOSSystem</a></li>
+      <li><a class="" href="os/InternetAddress-class.html">InternetAddress</a></li>
+      <li><a class="" href="os/LinuxAddrInfo-class.html">LinuxAddrInfo</a></li>
+      <li><a class="" href="os/LinuxSystem-class.html">LinuxSystem</a></li>
+      <li><a class="" href="os/MacOSAddrInfo-class.html">MacOSAddrInfo</a></li>
+      <li><a class="" href="os/MacOSSockAddrIn-class.html">MacOSSockAddrIn</a></li>
+      <li><a class="" href="os/MacOSSockAddrIn6-class.html">MacOSSockAddrIn6</a></li>
+      <li><a class="" href="os/MacOSSockAddrStorageMixin-class.html">MacOSSockAddrStorageMixin</a></li>
+      <li><a class="" href="os/MacOSSystem-class.html">MacOSSystem</a></li>
+      <li><a class="" href="os/PosixSockAddrIn-class.html">PosixSockAddrIn</a></li>
+      <li><a class="" href="os/PosixSockAddrIn6-class.html">PosixSockAddrIn6</a></li>
+      <li><a class="" href="os/PosixSockAddrStorage-class.html">PosixSockAddrStorage</a></li>
+      <li><a class="" href="os/PosixSystem-class.html">PosixSystem</a></li>
+      <li><a class="" href="os/SockAddrIn-class.html">SockAddrIn</a></li>
+      <li><a class="" href="os/SockAddrIn6-class.html">SockAddrIn6</a></li>
+      <li><a class="" href="os/SockAddrStorage-class.html">SockAddrStorage</a></li>
+      <li><a class="" href="os/System-class.html">System</a></li>
+      <li><a class="" href="os/SystemInformation-class.html">SystemInformation</a></li>
+      <li><a class="" href="os/TempFile-class.html">TempFile</a></li>
+    
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="desc markdown">
+    
+          <p class="no-docs">Not documented.</p>
+    
+    </section>
+
+    <section>
+      <dl class="dl-horizontal">
+
+        <dt>Implements</dt>
+        <dd>
+          <ul class="comma-separated clazz-relationships">
+            <li><a class="" href="os/System-class.html">System</a></li>
+          </ul>
+        </dd>
+
+
+        <dt>Implemented by</dt>
+        <dd><ul class="comma-separated clazz-relationships">
+          <li><a class="" href="os/LinuxSystem-class.html">LinuxSystem</a></li>
+          <li><a class="" href="os/MacOSSystem-class.html">MacOSSystem</a></li>
+        </ul></dd>
+
+      </dl>
+    </section>
+
+
+
+
+    <section class="summary offset-anchor" id="constructors">
+      <h2>Constructors</h2>
+
+      <dl class="constructor-summary-list">
+        <dt id="PosixSystem" class="callable">
+          <span class="name"><a class="" href="os/PosixSystem/PosixSystem.html">PosixSystem</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="ADDR_INFO_SIZE" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/ADDR_INFO_SIZE.html">ADDR_INFO_SIZE</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="AF_INET" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/AF_INET.html">AF_INET</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="AF_INET6" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/AF_INET6.html">AF_INET6</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="FIONREAD" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/FIONREAD.html">FIONREAD</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="hashCode" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/hashCode.html">hashCode</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p>Get a hash code for this object.<a href="os/PosixSystem/hashCode.html">&hellip;</a>
+</p>
+            <div class="features">
+        read-only, inherited
+    </div>
+</dd>
+        <dt id="O_APPEND" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/O_APPEND.html">O_APPEND</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="O_CLOEXEC" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/O_CLOEXEC.html">O_CLOEXEC</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="O_CREAT" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/O_CREAT.html">O_CREAT</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="O_NONBLOCK" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/O_NONBLOCK.html">O_NONBLOCK</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="O_RDONLY" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/O_RDONLY.html">O_RDONLY</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="O_RDWR" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/O_RDWR.html">O_RDWR</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="O_TRUNC" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/O_TRUNC.html">O_TRUNC</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="O_WRONLY" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/O_WRONLY.html">O_WRONLY</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="runtimeType" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/runtimeType.html">runtimeType</a></span>
+            <span class="signature">&#8594; Type</span>
+        </dt>
+        <dd>
+            <p>A representation of the runtime type of the object.</p>
+            <div class="features">
+        read-only, inherited
+    </div>
+</dd>
+        <dt id="SIZEOF_UTSNAME" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/SIZEOF_UTSNAME.html">SIZEOF_UTSNAME</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="SOCKADDR_STORAGE_SIZE" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/SOCKADDR_STORAGE_SIZE.html">SOCKADDR_STORAGE_SIZE</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="SOCK_DGRAM" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/SOCK_DGRAM.html">SOCK_DGRAM</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="SOCK_STREAM" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/SOCK_STREAM.html">SOCK_STREAM</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="SOL_SOCKET" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/SOL_SOCKET.html">SOL_SOCKET</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="SO_REUSEADDR" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/SO_REUSEADDR.html">SO_REUSEADDR</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="UTSNAME_LENGTH" class="property">
+            <span class="name"><a class="" href="os/PosixSystem/UTSNAME_LENGTH.html">UTSNAME_LENGTH</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="operators">
+      <h2>Operators</h2>
+      <dl class="callables">
+        <dt id="operator ==" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+                <span class="returntype parameter">&#8594; bool</span>
+            </span>
+        </dt>
+        <dd>
+            <p>The equality operator.<a href="os/PosixSystem/operator_equals.html">&hellip;</a>
+</p>
+            <div class="features">inherited</div>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-methods">
+      <h2>Methods</h2>
+      <dl class="callables">
+        <dt id="accept" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/accept.html">accept</a></span><span class="signature">(<wbr><span class="parameter" id="accept-param-fd"><span class="type-annotation">int</span> <span class="parameter-name">fd</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="access" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/access.html">access</a></span><span class="signature">(<wbr><span class="parameter" id="access-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="allocateSockAddrIn" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/allocateSockAddrIn.html">allocateSockAddrIn</a></span><span class="signature">(<wbr>)
+                <span class="returntype parameter">&#8594; <a class="" href="os/PosixSockAddrIn-class.html">PosixSockAddrIn</a></span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="allocateSockAddrIn6" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/allocateSockAddrIn6.html">allocateSockAddrIn6</a></span><span class="signature">(<wbr>)
+                <span class="returntype parameter">&#8594; <a class="" href="os/PosixSockAddrIn6-class.html">PosixSockAddrIn6</a></span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="allocateSockAddrStorageMemory" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/allocateSockAddrStorageMemory.html">allocateSockAddrStorageMemory</a></span><span class="signature">(<wbr>)
+                <span class="returntype parameter">&#8594; dynamic</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="available" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/available.html">available</a></span><span class="signature">(<wbr><span class="parameter" id="available-param-fd"><span class="type-annotation">int</span> <span class="parameter-name">fd</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="bind" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/bind.html">bind</a></span><span class="signature">(<wbr><span class="parameter" id="bind-param-fd"><span class="type-annotation">int</span> <span class="parameter-name">fd</span></span>, <span class="parameter" id="bind-param-address"><span class="type-annotation">_InternetAddress</span> <span class="parameter-name">address</span></span>, <span class="parameter" id="bind-param-port"><span class="type-annotation">int</span> <span class="parameter-name">port</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="close" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/close.html">close</a></span><span class="signature">(<wbr><span class="parameter" id="close-param-fd"><span class="type-annotation">int</span> <span class="parameter-name">fd</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="connect" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/connect.html">connect</a></span><span class="signature">(<wbr><span class="parameter" id="connect-param-fd"><span class="type-annotation">int</span> <span class="parameter-name">fd</span></span>, <span class="parameter" id="connect-param-address"><span class="type-annotation">_InternetAddress</span> <span class="parameter-name">address</span></span>, <span class="parameter" id="connect-param-port"><span class="type-annotation">int</span> <span class="parameter-name">port</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="errno" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/errno.html">errno</a></span><span class="signature">(<wbr>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="getForeign" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/getForeign.html">getForeign</a></span><span class="signature">(<wbr><span class="parameter" id="getForeign-param-buffer"><span class="type-annotation">ByteBuffer</span> <span class="parameter-name">buffer</span></span>)
+                <span class="returntype parameter">&#8594; dynamic</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="info" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/info.html">info</a></span><span class="signature">(<wbr>)
+                <span class="returntype parameter">&#8594; <a class="" href="os/SystemInformation-class.html">SystemInformation</a></span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="listen" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/listen.html">listen</a></span><span class="signature">(<wbr><span class="parameter" id="listen-param-fd"><span class="type-annotation">int</span> <span class="parameter-name">fd</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="lookup" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/lookup.html">lookup</a></span><span class="signature">(<wbr><span class="parameter" id="lookup-param-host"><span class="type-annotation">String</span> <span class="parameter-name">host</span></span>)
+                <span class="returntype parameter">&#8594; <a class="" href="os/InternetAddress-class.html">InternetAddress</a></span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="lseek" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/lseek.html">lseek</a></span><span class="signature">(<wbr><span class="parameter" id="lseek-param-fd"><span class="type-annotation">int</span> <span class="parameter-name">fd</span></span>, <span class="parameter" id="lseek-param-offset"><span class="type-annotation">int</span> <span class="parameter-name">offset</span></span>, <span class="parameter" id="lseek-param-whence"><span class="type-annotation">int</span> <span class="parameter-name">whence</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="memcpy" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/memcpy.html">memcpy</a></span><span class="signature">(<wbr><span class="parameter" id="memcpy-param-dest"><span class="parameter-name">dest</span></span>, <span class="parameter" id="memcpy-param-destOffset"><span class="type-annotation">int</span> <span class="parameter-name">destOffset</span></span>, <span class="parameter" id="memcpy-param-src"><span class="parameter-name">src</span></span>, <span class="parameter" id="memcpy-param-srcOffset"><span class="type-annotation">int</span> <span class="parameter-name">srcOffset</span></span>, <span class="parameter" id="memcpy-param-length"><span class="type-annotation">int</span> <span class="parameter-name">length</span></span>)
+                <span class="returntype parameter">&#8594; void</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="mkstemp" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/mkstemp.html">mkstemp</a></span><span class="signature">(<wbr><span class="parameter" id="mkstemp-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+                <span class="returntype parameter">&#8594; <a class="" href="os/TempFile-class.html">TempFile</a></span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="noSuchMethod" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+                <span class="returntype parameter">&#8594; dynamic</span>
+            </span>
+        </dt>
+        <dd>
+            <p>Invoked when a non-existent method or property is accessed.<a href="os/PosixSystem/noSuchMethod.html">&hellip;</a>
+</p>
+            <div class="features">inherited</div>
+        </dd>
+        <dt id="open" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/open.html">open</a></span><span class="signature">(<wbr><span class="parameter" id="open-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="open-param-read"><span class="type-annotation">bool</span> <span class="parameter-name">read</span></span>, <span class="parameter" id="open-param-write"><span class="type-annotation">bool</span> <span class="parameter-name">write</span></span>, <span class="parameter" id="open-param-append"><span class="type-annotation">bool</span> <span class="parameter-name">append</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="port" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/port.html">port</a></span><span class="signature">(<wbr><span class="parameter" id="port-param-fd"><span class="type-annotation">int</span> <span class="parameter-name">fd</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="read" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/read.html">read</a></span><span class="signature">(<wbr><span class="parameter" id="read-param-fd"><span class="type-annotation">int</span> <span class="parameter-name">fd</span></span>, <span class="parameter" id="read-param-buffer"><span class="type-annotation">ByteBuffer</span> <span class="parameter-name">buffer</span></span>, <span class="parameter" id="read-param-offset"><span class="type-annotation">int</span> <span class="parameter-name">offset</span></span>, <span class="parameter" id="read-param-length"><span class="type-annotation">int</span> <span class="parameter-name">length</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="recvfrom" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/recvfrom.html">recvfrom</a></span><span class="signature">(<wbr><span class="parameter" id="recvfrom-param-fd"><span class="type-annotation">int</span> <span class="parameter-name">fd</span></span>, <span class="parameter" id="recvfrom-param-buffer"><span class="type-annotation">ByteBuffer</span> <span class="parameter-name">buffer</span></span>, <span class="parameter" id="recvfrom-param-sockaddr"><span class="parameter-name">sockaddr</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="sendto" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/sendto.html">sendto</a></span><span class="signature">(<wbr><span class="parameter" id="sendto-param-fd"><span class="type-annotation">int</span> <span class="parameter-name">fd</span></span>, <span class="parameter" id="sendto-param-buffer"><span class="type-annotation">ByteBuffer</span> <span class="parameter-name">buffer</span></span>, <span class="parameter" id="sendto-param-target"><span class="type-annotation"><a class="" href="os/InternetAddress-class.html">InternetAddress</a></span> <span class="parameter-name">target</span></span>, <span class="parameter" id="sendto-param-port"><span class="type-annotation">int</span> <span class="parameter-name">port</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="setBlocking" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/setBlocking.html">setBlocking</a></span><span class="signature">(<wbr><span class="parameter" id="setBlocking-param-fd"><span class="type-annotation">int</span> <span class="parameter-name">fd</span></span>, <span class="parameter" id="setBlocking-param-blocking"><span class="type-annotation">bool</span> <span class="parameter-name">blocking</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="setCloseOnExec" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/setCloseOnExec.html">setCloseOnExec</a></span><span class="signature">(<wbr><span class="parameter" id="setCloseOnExec-param-fd"><span class="type-annotation">int</span> <span class="parameter-name">fd</span></span>, <span class="parameter" id="setCloseOnExec-param-closeOnExec"><span class="type-annotation">bool</span> <span class="parameter-name">closeOnExec</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="setsockopt" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/setsockopt.html">setsockopt</a></span><span class="signature">(<wbr><span class="parameter" id="setsockopt-param-fd"><span class="type-annotation">int</span> <span class="parameter-name">fd</span></span>, <span class="parameter" id="setsockopt-param-level"><span class="type-annotation">int</span> <span class="parameter-name">level</span></span>, <span class="parameter" id="setsockopt-param-optname"><span class="type-annotation">int</span> <span class="parameter-name">optname</span></span>, <span class="parameter" id="setsockopt-param-value"><span class="parameter-name">value</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="shutdown" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/shutdown.html">shutdown</a></span><span class="signature">(<wbr><span class="parameter" id="shutdown-param-fd"><span class="type-annotation">int</span> <span class="parameter-name">fd</span></span>, <span class="parameter" id="shutdown-param-how"><span class="type-annotation">int</span> <span class="parameter-name">how</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="socket" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/socket.html">socket</a></span><span class="signature">(<wbr><span class="parameter" id="socket-param-domain"><span class="type-annotation">int</span> <span class="parameter-name">domain</span></span>, <span class="parameter" id="socket-param-type"><span class="type-annotation">int</span> <span class="parameter-name">type</span></span>, <span class="parameter" id="socket-param-protocol"><span class="type-annotation">int</span> <span class="parameter-name">protocol</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="strerror" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/strerror.html">strerror</a></span><span class="signature">(<wbr><span class="parameter" id="strerror-param-errno"><span class="type-annotation">int</span> <span class="parameter-name">errno</span></span>)
+                <span class="returntype parameter">&#8594; String</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="toString" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/toString.html">toString</a></span><span class="signature">(<wbr>)
+                <span class="returntype parameter">&#8594; String</span>
+            </span>
+        </dt>
+        <dd>
+            <p>Returns a string representation of this object.</p>
+            <div class="features">inherited</div>
+        </dd>
+        <dt id="unlink" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/unlink.html">unlink</a></span><span class="signature">(<wbr><span class="parameter" id="unlink-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="write" class="callable">
+            <span class="name "><a class="" href="os/PosixSystem/write.html">write</a></span><span class="signature">(<wbr><span class="parameter" id="write-param-fd"><span class="type-annotation">int</span> <span class="parameter-name">fd</span></span>, <span class="parameter" id="write-param-buffer"><span class="type-annotation">ByteBuffer</span> <span class="parameter-name">buffer</span></span>, <span class="parameter" id="write-param-offset"><span class="type-annotation">int</span> <span class="parameter-name">offset</span></span>, <span class="parameter" id="write-param-length"><span class="type-annotation">int</span> <span class="parameter-name">length</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+      </dl>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <h5>PosixSystem</h5>
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="os/PosixSystem-class.html#instance-properties">Properties</a></li>
+      <li><a class="" href="os/PosixSystem/ADDR_INFO_SIZE.html">ADDR_INFO_SIZE</a></li>
+      <li><a class="" href="os/PosixSystem/AF_INET.html">AF_INET</a></li>
+      <li><a class="" href="os/PosixSystem/AF_INET6.html">AF_INET6</a></li>
+      <li><a class="" href="os/PosixSystem/FIONREAD.html">FIONREAD</a></li>
+      <li><a class="" href="os/PosixSystem/hashCode.html">hashCode</a></li>
+      <li><a class="" href="os/PosixSystem/O_APPEND.html">O_APPEND</a></li>
+      <li><a class="" href="os/PosixSystem/O_CLOEXEC.html">O_CLOEXEC</a></li>
+      <li><a class="" href="os/PosixSystem/O_CREAT.html">O_CREAT</a></li>
+      <li><a class="" href="os/PosixSystem/O_NONBLOCK.html">O_NONBLOCK</a></li>
+      <li><a class="" href="os/PosixSystem/O_RDONLY.html">O_RDONLY</a></li>
+      <li><a class="" href="os/PosixSystem/O_RDWR.html">O_RDWR</a></li>
+      <li><a class="" href="os/PosixSystem/O_TRUNC.html">O_TRUNC</a></li>
+      <li><a class="" href="os/PosixSystem/O_WRONLY.html">O_WRONLY</a></li>
+      <li><a class="" href="os/PosixSystem/runtimeType.html">runtimeType</a></li>
+      <li><a class="" href="os/PosixSystem/SIZEOF_UTSNAME.html">SIZEOF_UTSNAME</a></li>
+      <li><a class="" href="os/PosixSystem/SOCKADDR_STORAGE_SIZE.html">SOCKADDR_STORAGE_SIZE</a></li>
+      <li><a class="" href="os/PosixSystem/SOCK_DGRAM.html">SOCK_DGRAM</a></li>
+      <li><a class="" href="os/PosixSystem/SOCK_STREAM.html">SOCK_STREAM</a></li>
+      <li><a class="" href="os/PosixSystem/SOL_SOCKET.html">SOL_SOCKET</a></li>
+      <li><a class="" href="os/PosixSystem/SO_REUSEADDR.html">SO_REUSEADDR</a></li>
+      <li><a class="" href="os/PosixSystem/UTSNAME_LENGTH.html">UTSNAME_LENGTH</a></li>
+    
+      <li class="section-title"><a href="os/PosixSystem-class.html#constructors">Constructors</a></li>
+      <li><a href="os/PosixSystem/PosixSystem.html">PosixSystem</a></li>
+    
+      <li class="section-title"><a href="os/PosixSystem-class.html#operators">Operators</a></li>
+      <li><a class="" href="os/PosixSystem/operator_equals.html">operator ==</a></li>
+    
+      <li class="section-title"><a href="os/PosixSystem-class.html#instance-methods">Methods</a></li>
+      <li><a class="" href="os/PosixSystem/accept.html">accept</a></li>
+      <li><a class="" href="os/PosixSystem/access.html">access</a></li>
+      <li><a class="" href="os/PosixSystem/allocateSockAddrIn.html">allocateSockAddrIn</a></li>
+      <li><a class="" href="os/PosixSystem/allocateSockAddrIn6.html">allocateSockAddrIn6</a></li>
+      <li><a class="" href="os/PosixSystem/allocateSockAddrStorageMemory.html">allocateSockAddrStorageMemory</a></li>
+      <li><a class="" href="os/PosixSystem/available.html">available</a></li>
+      <li><a class="" href="os/PosixSystem/bind.html">bind</a></li>
+      <li><a class="" href="os/PosixSystem/close.html">close</a></li>
+      <li><a class="" href="os/PosixSystem/connect.html">connect</a></li>
+      <li><a class="" href="os/PosixSystem/errno.html">errno</a></li>
+      <li><a class="" href="os/PosixSystem/getForeign.html">getForeign</a></li>
+      <li><a class="" href="os/PosixSystem/info.html">info</a></li>
+      <li><a class="" href="os/PosixSystem/listen.html">listen</a></li>
+      <li><a class="" href="os/PosixSystem/lookup.html">lookup</a></li>
+      <li><a class="" href="os/PosixSystem/lseek.html">lseek</a></li>
+      <li><a class="" href="os/PosixSystem/memcpy.html">memcpy</a></li>
+      <li><a class="" href="os/PosixSystem/mkstemp.html">mkstemp</a></li>
+      <li><a class="" href="os/PosixSystem/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a class="" href="os/PosixSystem/open.html">open</a></li>
+      <li><a class="" href="os/PosixSystem/port.html">port</a></li>
+      <li><a class="" href="os/PosixSystem/read.html">read</a></li>
+      <li><a class="" href="os/PosixSystem/recvfrom.html">recvfrom</a></li>
+      <li><a class="" href="os/PosixSystem/sendto.html">sendto</a></li>
+      <li><a class="" href="os/PosixSystem/setBlocking.html">setBlocking</a></li>
+      <li><a class="" href="os/PosixSystem/setCloseOnExec.html">setCloseOnExec</a></li>
+      <li><a class="" href="os/PosixSystem/setsockopt.html">setsockopt</a></li>
+      <li><a class="" href="os/PosixSystem/shutdown.html">shutdown</a></li>
+      <li><a class="" href="os/PosixSystem/socket.html">socket</a></li>
+      <li><a class="" href="os/PosixSystem/strerror.html">strerror</a></li>
+      <li><a class="" href="os/PosixSystem/toString.html">toString</a></li>
+      <li><a class="" href="os/PosixSystem/unlink.html">unlink</a></li>
+      <li><a class="" href="os/PosixSystem/write.html">write</a></li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  </div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  Dartino_SDK 
+                </span>
+                &bull;
+                <span class="no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.7.4 -->
+</body>
+
+</html>

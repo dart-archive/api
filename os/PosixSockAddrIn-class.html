@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PosixSockAddrIn class - os library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the PosixSockAddrIn class from the os library, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">Dartino_SDK</a></li>
+                  <li><a href="os/os-library.html">os</a></li>
+                  <li class="self-crumb">PosixSockAddrIn</li>
+              </ol>
+              <div class="self-name">PosixSockAddrIn</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
+    </nav>
+
+    <div class="container masthead">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">Dartino_SDK</a></li>
+              <li><a href="os/os-library.html">os</a></li>
+              <li class="self-crumb">PosixSockAddrIn</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">class</div> PosixSockAddrIn
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="os/PosixSockAddrIn-class.html#instance-properties">Properties</a></li>
+              <li><a href="os/PosixSockAddrIn-class.html#constructors">Constructors</a></li>
+              <li><a href="os/PosixSockAddrIn-class.html#operators">Operators</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">Dartino_SDK</a></h5>
+    <h5><a href="os/os-library.html">os</a></h5>
+
+    <ol>
+      <li class="section-title"><a href="os/os-library.html#constants">Constants</a></li>
+      <li><a class="" href="os/FD_CLOEXEC.html">FD_CLOEXEC</a></li>
+      <li><a class="" href="os/F_GETFD.html">F_GETFD</a></li>
+      <li><a class="" href="os/F_GETFL.html">F_GETFL</a></li>
+      <li><a class="" href="os/F_SETFD.html">F_SETFD</a></li>
+      <li><a class="" href="os/F_SETFL.html">F_SETFL</a></li>
+      <li><a class="" href="os/notSupported.html">notSupported</a></li>
+      <li><a class="" href="os/SEEK_CUR.html">SEEK_CUR</a></li>
+      <li><a class="" href="os/SEEK_END.html">SEEK_END</a></li>
+      <li><a class="" href="os/SEEK_SET.html">SEEK_SET</a></li>
+      <li><a class="" href="os/SHUT_RD.html">SHUT_RD</a></li>
+      <li><a class="" href="os/SHUT_RDWR.html">SHUT_RDWR</a></li>
+      <li><a class="" href="os/SHUT_WR.html">SHUT_WR</a></li>
+    
+    
+      <li class="section-title"><a href="os/os-library.html#properties">Properties</a></li>
+      <li><a class="" href="os/errnos.html">errnos</a></li>
+      <li><a class="" href="os/sys.html">sys</a></li>
+    
+      <li class="section-title"><a href="os/os-library.html#functions">Functions</a></li>
+      <li><a class="" href="os/errno.html">errno</a></li>
+      <li><a class="" href="os/getSystem.html">getSystem</a></li>
+    
+    
+      <li class="section-title"><a href="os/os-library.html#classes">Classes</a></li>
+      <li><a class="" href="os/Accessor-class.html">Accessor</a></li>
+      <li><a class="" href="os/AddrInfo-class.html">AddrInfo</a></li>
+      <li><a class="" href="os/AndroidAddrInfo-class.html">AndroidAddrInfo</a></li>
+      <li><a class="" href="os/Errnos-class.html">Errnos</a></li>
+      <li><a class="" href="os/FreeRTOSSystem-class.html">FreeRTOSSystem</a></li>
+      <li><a class="" href="os/InternetAddress-class.html">InternetAddress</a></li>
+      <li><a class="" href="os/LinuxAddrInfo-class.html">LinuxAddrInfo</a></li>
+      <li><a class="" href="os/LinuxSystem-class.html">LinuxSystem</a></li>
+      <li><a class="" href="os/MacOSAddrInfo-class.html">MacOSAddrInfo</a></li>
+      <li><a class="" href="os/MacOSSockAddrIn-class.html">MacOSSockAddrIn</a></li>
+      <li><a class="" href="os/MacOSSockAddrIn6-class.html">MacOSSockAddrIn6</a></li>
+      <li><a class="" href="os/MacOSSockAddrStorageMixin-class.html">MacOSSockAddrStorageMixin</a></li>
+      <li><a class="" href="os/MacOSSystem-class.html">MacOSSystem</a></li>
+      <li><a class="" href="os/PosixSockAddrIn-class.html">PosixSockAddrIn</a></li>
+      <li><a class="" href="os/PosixSockAddrIn6-class.html">PosixSockAddrIn6</a></li>
+      <li><a class="" href="os/PosixSockAddrStorage-class.html">PosixSockAddrStorage</a></li>
+      <li><a class="" href="os/PosixSystem-class.html">PosixSystem</a></li>
+      <li><a class="" href="os/SockAddrIn-class.html">SockAddrIn</a></li>
+      <li><a class="" href="os/SockAddrIn6-class.html">SockAddrIn6</a></li>
+      <li><a class="" href="os/SockAddrStorage-class.html">SockAddrStorage</a></li>
+      <li><a class="" href="os/System-class.html">System</a></li>
+      <li><a class="" href="os/SystemInformation-class.html">SystemInformation</a></li>
+      <li><a class="" href="os/TempFile-class.html">TempFile</a></li>
+    
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="desc markdown">
+    
+          <p class="no-docs">Not documented.</p>
+    
+    </section>
+
+    <section>
+      <dl class="dl-horizontal">
+        <dt>Inheritance</dt>
+        <dd><ul class="gt-separated dark clazz-relationships">
+          <li>Object</li>
+          <li><a class="" href="os/Accessor-class.html">Accessor</a></li>
+          <li><a class="" href="os/PosixSockAddrStorage-class.html">PosixSockAddrStorage</a></li>
+          <li>PosixSockAddrIn</li>
+        </ul></dd>
+
+        <dt>Implements</dt>
+        <dd>
+          <ul class="comma-separated clazz-relationships">
+            <li><a class="" href="os/SockAddrIn-class.html">SockAddrIn</a></li>
+          </ul>
+        </dd>
+
+
+        <dt>Implemented by</dt>
+        <dd><ul class="comma-separated clazz-relationships">
+          <li><a class="" href="os/MacOSSockAddrIn-class.html">MacOSSockAddrIn</a></li>
+          <li><a class="" href="os/PosixSockAddrIn6-class.html">PosixSockAddrIn6</a></li>
+        </ul></dd>
+
+      </dl>
+    </section>
+
+
+
+
+    <section class="summary offset-anchor" id="constructors">
+      <h2>Constructors</h2>
+
+      <dl class="constructor-summary-list">
+        <dt id="PosixSockAddrIn" class="callable">
+          <span class="name"><a class="" href="os/PosixSockAddrIn/PosixSockAddrIn.html">PosixSockAddrIn</a></span><span class="signature">(<span class="parameter" id="-param-buffer"><span class="parameter-name">buffer</span></span>, <span class="parameter" id="-param-offset"><span class="type-annotation">int</span> <span class="parameter-name">offset</span></span>)</span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="address" class="property">
+            <span class="name"><a class="" href="os/PosixSockAddrIn/address.html">address</a></span>
+            <span class="signature">&#8594; <a class="" href="os/InternetAddress-class.html">InternetAddress</a></span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read / write
+    </div>
+</dd>
+        <dt id="buffer" class="property">
+            <span class="name"><a class="" href="os/Accessor/buffer.html">buffer</a></span>
+            <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only, inherited
+    </div>
+</dd>
+        <dt id="family" class="property">
+            <span class="name"><a class="" href="os/PosixSockAddrStorage/family.html">family</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read / write, inherited
+    </div>
+</dd>
+        <dt id="hashCode" class="property">
+            <span class="name"><a class="" href="os/PosixSockAddrIn/hashCode.html">hashCode</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p>Get a hash code for this object.<a href="os/PosixSockAddrIn/hashCode.html">&hellip;</a>
+</p>
+            <div class="features">
+        read-only, inherited
+    </div>
+</dd>
+        <dt id="offset" class="property">
+            <span class="name"><a class="" href="os/Accessor/offset.html">offset</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only, inherited
+    </div>
+</dd>
+        <dt id="port" class="property">
+            <span class="name"><a class="" href="os/PosixSockAddrIn/port.html">port</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read / write
+    </div>
+</dd>
+        <dt id="runtimeType" class="property">
+            <span class="name"><a class="" href="os/PosixSockAddrIn/runtimeType.html">runtimeType</a></span>
+            <span class="signature">&#8594; Type</span>
+        </dt>
+        <dd>
+            <p>A representation of the runtime type of the object.</p>
+            <div class="features">
+        read-only, inherited
+    </div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="operators">
+      <h2>Operators</h2>
+      <dl class="callables">
+        <dt id="operator ==" class="callable">
+            <span class="name "><a class="" href="os/PosixSockAddrIn/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+                <span class="returntype parameter">&#8594; bool</span>
+            </span>
+        </dt>
+        <dd>
+            <p>The equality operator.<a href="os/PosixSockAddrIn/operator_equals.html">&hellip;</a>
+</p>
+            <div class="features">inherited</div>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-methods">
+      <h2>Methods</h2>
+      <dl class="callables">
+        <dt id="adr" class="callable">
+            <span class="name "><a class="" href="os/Accessor/adr.html">adr</a></span><span class="signature">(<wbr><span class="parameter" id="adr-param-relative"><span class="type-annotation">int</span> <span class="parameter-name">relative</span></span>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p>Calculate the absolute address in <a class="" href="os/Accessor/buffer.html">buffer</a>.</p>
+            <div class="features">inherited</div>
+        </dd>
+        <dt id="free" class="callable">
+            <span class="name "><a class="" href="os/Accessor/free.html">free</a></span><span class="signature">(<wbr>)
+                <span class="returntype parameter">&#8594; void</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">inherited</div>
+        </dd>
+        <dt id="noSuchMethod" class="callable">
+            <span class="name "><a class="" href="os/PosixSockAddrIn/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+                <span class="returntype parameter">&#8594; dynamic</span>
+            </span>
+        </dt>
+        <dd>
+            <p>Invoked when a non-existent method or property is accessed.<a href="os/PosixSockAddrIn/noSuchMethod.html">&hellip;</a>
+</p>
+            <div class="features">inherited</div>
+        </dd>
+        <dt id="toString" class="callable">
+            <span class="name "><a class="" href="os/PosixSockAddrIn/toString.html">toString</a></span><span class="signature">(<wbr>)
+                <span class="returntype parameter">&#8594; String</span>
+            </span>
+        </dt>
+        <dd>
+            <p>Returns a string representation of this object.</p>
+            <div class="features">inherited</div>
+        </dd>
+      </dl>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <h5>PosixSockAddrIn</h5>
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="os/PosixSockAddrIn-class.html#instance-properties">Properties</a></li>
+      <li><a class="" href="os/PosixSockAddrIn/address.html">address</a></li>
+      <li><a class="" href="os/Accessor/buffer.html">buffer</a></li>
+      <li><a class="" href="os/PosixSockAddrStorage/family.html">family</a></li>
+      <li><a class="" href="os/PosixSockAddrIn/hashCode.html">hashCode</a></li>
+      <li><a class="" href="os/Accessor/offset.html">offset</a></li>
+      <li><a class="" href="os/PosixSockAddrIn/port.html">port</a></li>
+      <li><a class="" href="os/PosixSockAddrIn/runtimeType.html">runtimeType</a></li>
+    
+      <li class="section-title"><a href="os/PosixSockAddrIn-class.html#constructors">Constructors</a></li>
+      <li><a href="os/PosixSockAddrIn/PosixSockAddrIn.html">PosixSockAddrIn</a></li>
+    
+      <li class="section-title"><a href="os/PosixSockAddrIn-class.html#operators">Operators</a></li>
+      <li><a class="" href="os/PosixSockAddrIn/operator_equals.html">operator ==</a></li>
+    
+      <li class="section-title"><a href="os/PosixSockAddrIn-class.html#instance-methods">Methods</a></li>
+      <li><a class="" href="os/Accessor/adr.html">adr</a></li>
+      <li><a class="" href="os/Accessor/free.html">free</a></li>
+      <li><a class="" href="os/PosixSockAddrIn/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a class="" href="os/PosixSockAddrIn/toString.html">toString</a></li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  </div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  Dartino_SDK 
+                </span>
+                &bull;
+                <span class="no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.7.4 -->
+</body>
+
+</html>

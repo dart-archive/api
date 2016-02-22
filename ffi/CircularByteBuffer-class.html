@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CircularByteBuffer class - ffi library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the CircularByteBuffer class from the ffi library, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">Dartino_SDK</a></li>
+                  <li><a href="ffi/ffi-library.html">ffi</a></li>
+                  <li class="self-crumb">CircularByteBuffer</li>
+              </ol>
+              <div class="self-name">CircularByteBuffer</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
+    </nav>
+
+    <div class="container masthead">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">Dartino_SDK</a></li>
+              <li><a href="ffi/ffi-library.html">ffi</a></li>
+              <li class="self-crumb">CircularByteBuffer</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">class</div> CircularByteBuffer
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="ffi/CircularByteBuffer-class.html#constants">Constants</a></li>
+              <li><a href="ffi/CircularByteBuffer-class.html#instance-properties">Properties</a></li>
+              <li><a href="ffi/CircularByteBuffer-class.html#constructors">Constructors</a></li>
+              <li><a href="ffi/CircularByteBuffer-class.html#operators">Operators</a></li>
+              <li><a href="ffi/CircularByteBuffer-class.html#instance-methods">Methods</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">Dartino_SDK</a></h5>
+    <h5><a href="ffi/ffi-library.html">ffi</a></h5>
+
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="ffi/ffi-library.html#functions">Functions</a></li>
+      <li><a class="" href="ffi/cStringToString.html">cStringToString</a></li>
+      <li><a class="" href="ffi/memoryToString.html">memoryToString</a></li>
+    
+    
+      <li class="section-title"><a href="ffi/ffi-library.html#classes">Classes</a></li>
+      <li><a class="" href="ffi/CircularByteBuffer-class.html">CircularByteBuffer</a></li>
+    
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="desc markdown">
+    
+          <p>A circular buffer used from both dart and c. The buffer has the start index
+and the end index as the first two 4 byte integers in the underlying foreign
+memory, and the size as the next 4.
+This is <em>not</em> thread safe, only access this from either c or dart at any
+point in time.</p>
+    
+    </section>
+
+
+    <section class="summary offset-anchor" id="constants">
+      <h2>Constants</h2>
+
+      <dl class="properties">
+        <dt id="DATA_START" class="constant">
+            <span class="name "><a class="" href="ffi/CircularByteBuffer/DATA_START.html">DATA_START</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div>
+              <span class="features">const</span>
+              <span class="signature"><code>12</code></span>
+            </div>
+        </dd>
+        <dt id="HEADER_SIZE" class="constant">
+            <span class="name "><a class="" href="ffi/CircularByteBuffer/HEADER_SIZE.html">HEADER_SIZE</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div>
+              <span class="features">const</span>
+              <span class="signature"><code>12</code></span>
+            </div>
+        </dd>
+        <dt id="HEAD_INDEX" class="constant">
+            <span class="name "><a class="" href="ffi/CircularByteBuffer/HEAD_INDEX.html">HEAD_INDEX</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div>
+              <span class="features">const</span>
+              <span class="signature"><code>0</code></span>
+            </div>
+        </dd>
+        <dt id="SIZE_INDEX" class="constant">
+            <span class="name "><a class="" href="ffi/CircularByteBuffer/SIZE_INDEX.html">SIZE_INDEX</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div>
+              <span class="features">const</span>
+              <span class="signature"><code>8</code></span>
+            </div>
+        </dd>
+        <dt id="TAIL_INDEX" class="constant">
+            <span class="name "><a class="" href="ffi/CircularByteBuffer/TAIL_INDEX.html">TAIL_INDEX</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div>
+              <span class="features">const</span>
+              <span class="signature"><code>4</code></span>
+            </div>
+        </dd>
+      </dl>
+    </section>
+
+
+
+    <section class="summary offset-anchor" id="constructors">
+      <h2>Constructors</h2>
+
+      <dl class="constructor-summary-list">
+        <dt id="CircularByteBuffer" class="callable">
+          <span class="name"><a class="" href="ffi/CircularByteBuffer/CircularByteBuffer.html">CircularByteBuffer</a></span><span class="signature">(<span class="parameter" id="-param-size"><span class="type-annotation">int</span> <span class="parameter-name">size</span></span>)</span>
+        </dt>
+        <dd>
+          <p>Creates a new buffer capable of holding size bytes. The underlying memory
+has 8 additional bytes for holding the head, tail and size, and one more
+byte to distinguish empty from full.</p>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="available" class="property">
+            <span class="name"><a class="" href="ffi/CircularByteBuffer/available.html">available</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p>Return the number of available bytes that can be read.</p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="foreign" class="property">
+            <span class="name"><a class="" href="ffi/CircularByteBuffer/foreign.html">foreign</a></span>
+            <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="freeSpace" class="property">
+            <span class="name"><a class="" href="ffi/CircularByteBuffer/freeSpace.html">freeSpace</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p>Return the number of bytes we can write to the buffer.</p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="hashCode" class="property">
+            <span class="name"><a class="" href="ffi/CircularByteBuffer/hashCode.html">hashCode</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p>Get a hash code for this object.<a href="ffi/CircularByteBuffer/hashCode.html">&hellip;</a>
+</p>
+            <div class="features">
+        read-only, inherited
+    </div>
+</dd>
+        <dt id="isEmpty" class="property">
+            <span class="name"><a class="" href="ffi/CircularByteBuffer/isEmpty.html">isEmpty</a></span>
+            <span class="signature">&#8594; bool</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="isFull" class="property">
+            <span class="name"><a class="" href="ffi/CircularByteBuffer/isFull.html">isFull</a></span>
+            <span class="signature">&#8594; bool</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
+        read-only
+    </div>
+</dd>
+        <dt id="runtimeType" class="property">
+            <span class="name"><a class="" href="ffi/CircularByteBuffer/runtimeType.html">runtimeType</a></span>
+            <span class="signature">&#8594; Type</span>
+        </dt>
+        <dd>
+            <p>A representation of the runtime type of the object.</p>
+            <div class="features">
+        read-only, inherited
+    </div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="operators">
+      <h2>Operators</h2>
+      <dl class="callables">
+        <dt id="operator ==" class="callable">
+            <span class="name "><a class="" href="ffi/CircularByteBuffer/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+                <span class="returntype parameter">&#8594; bool</span>
+            </span>
+        </dt>
+        <dd>
+            <p>The equality operator.<a href="ffi/CircularByteBuffer/operator_equals.html">&hellip;</a>
+</p>
+            <div class="features">inherited</div>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-methods">
+      <h2>Methods</h2>
+      <dl class="callables">
+        <dt id="noSuchMethod" class="callable">
+            <span class="name "><a class="" href="ffi/CircularByteBuffer/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+                <span class="returntype parameter">&#8594; dynamic</span>
+            </span>
+        </dt>
+        <dd>
+            <p>Invoked when a non-existent method or property is accessed.<a href="ffi/CircularByteBuffer/noSuchMethod.html">&hellip;</a>
+</p>
+            <div class="features">inherited</div>
+        </dd>
+        <dt id="read" class="callable">
+            <span class="name "><a class="" href="ffi/CircularByteBuffer/read.html">read</a></span><span class="signature">(<wbr><span class="parameter" id="read-param-buffer"><span class="type-annotation">ByteBuffer</span> <span class="parameter-name">buffer</span></span>, [<span class="parameter" id="read-param-index"><span class="type-annotation">int</span> <span class="parameter-name">index</span> = <span class="default-value">0</span></span>, <span class="parameter" id="read-param-length"><span class="type-annotation">int</span> <span class="parameter-name">length</span></span>])
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p>Read at most lenght bytes into buffer, starting at index index. Returns the
+number of bytes read into the buffer. If length is not provided use the
+length in bytes of the buffer, minus the start index.</p>
+        </dd>
+        <dt id="toString" class="callable">
+            <span class="name "><a class="" href="ffi/CircularByteBuffer/toString.html">toString</a></span><span class="signature">(<wbr>)
+                <span class="returntype parameter">&#8594; String</span>
+            </span>
+        </dt>
+        <dd>
+            <p>Returns a string representation of this object.</p>
+            <div class="features">inherited</div>
+        </dd>
+        <dt id="write" class="callable">
+            <span class="name "><a class="" href="ffi/CircularByteBuffer/write.html">write</a></span><span class="signature">(<wbr><span class="parameter" id="write-param-buffer"><span class="type-annotation">ByteBuffer</span> <span class="parameter-name">buffer</span></span>, [<span class="parameter" id="write-param-index"><span class="type-annotation">int</span> <span class="parameter-name">index</span> = <span class="default-value">0</span></span>, <span class="parameter" id="write-param-length"><span class="type-annotation">int</span> <span class="parameter-name">length</span></span>])
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p>Write at most lenght bytes from buffer, starting to read bytes at index
+index. Returns the number of bytes written into the buffer. If length is
+not provided use the length in bytes of the buffer, minus the start index.</p>
+        </dd>
+      </dl>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <h5>CircularByteBuffer</h5>
+    <ol>
+      <li class="section-title"><a href="ffi/CircularByteBuffer-class.html#constants">Constants</a></li>
+      <li><a class="" href="ffi/CircularByteBuffer/DATA_START.html">DATA_START</a></li>
+      <li><a class="" href="ffi/CircularByteBuffer/HEADER_SIZE.html">HEADER_SIZE</a></li>
+      <li><a class="" href="ffi/CircularByteBuffer/HEAD_INDEX.html">HEAD_INDEX</a></li>
+      <li><a class="" href="ffi/CircularByteBuffer/SIZE_INDEX.html">SIZE_INDEX</a></li>
+      <li><a class="" href="ffi/CircularByteBuffer/TAIL_INDEX.html">TAIL_INDEX</a></li>
+    
+    
+    
+      <li class="section-title"><a href="ffi/CircularByteBuffer-class.html#instance-properties">Properties</a></li>
+      <li><a class="" href="ffi/CircularByteBuffer/available.html">available</a></li>
+      <li><a class="" href="ffi/CircularByteBuffer/foreign.html">foreign</a></li>
+      <li><a class="" href="ffi/CircularByteBuffer/freeSpace.html">freeSpace</a></li>
+      <li><a class="" href="ffi/CircularByteBuffer/hashCode.html">hashCode</a></li>
+      <li><a class="" href="ffi/CircularByteBuffer/isEmpty.html">isEmpty</a></li>
+      <li><a class="" href="ffi/CircularByteBuffer/isFull.html">isFull</a></li>
+      <li><a class="" href="ffi/CircularByteBuffer/runtimeType.html">runtimeType</a></li>
+    
+      <li class="section-title"><a href="ffi/CircularByteBuffer-class.html#constructors">Constructors</a></li>
+      <li><a href="ffi/CircularByteBuffer/CircularByteBuffer.html">CircularByteBuffer</a></li>
+    
+      <li class="section-title"><a href="ffi/CircularByteBuffer-class.html#operators">Operators</a></li>
+      <li><a class="" href="ffi/CircularByteBuffer/operator_equals.html">operator ==</a></li>
+    
+      <li class="section-title"><a href="ffi/CircularByteBuffer-class.html#instance-methods">Methods</a></li>
+      <li><a class="" href="ffi/CircularByteBuffer/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a class="" href="ffi/CircularByteBuffer/read.html">read</a></li>
+      <li><a class="" href="ffi/CircularByteBuffer/toString.html">toString</a></li>
+      <li><a class="" href="ffi/CircularByteBuffer/write.html">write</a></li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  </div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  Dartino_SDK 
+                </span>
+                &bull;
+                <span class="no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.7.4 -->
+</body>
+
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gpio library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="gpio library API docs, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">Dartino_SDK</a></li>
+                  <li class="self-crumb">gpio</li>
+              </ol>
+              <div class="self-name">gpio</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
+    </nav>
+
+    <div class="container masthead">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">Dartino_SDK</a></li>
+              <li class="self-crumb">gpio</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">library</div> gpio
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="gpio/gpio-library.html#enums">Enums</a></li>
+              <li><a href="gpio/gpio-library.html#classes">Classes</a></li>
+              <li><a href="gpio/gpio-library.html#exceptions">Exceptions</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">Dartino_SDK</a></h5>
+
+    <ol>
+      <li class="section-title"><a href="index.html">Libraries</a></li>
+      <li><a href="dartino/dartino-library.html">dartino</a></li>
+      <li><a href="ffi/ffi-library.html">ffi</a></li>
+      <li><a href="file/file-library.html">file</a></li>
+      <li><a href="gpio/gpio-library.html">gpio</a></li>
+      <li><a href="http/http-library.html">http</a></li>
+      <li><a href="i2c/i2c-library.html">i2c</a></li>
+      <li><a href="mbedtls/mbedtls-library.html">mbedtls</a></li>
+      <li><a href="mqtt/mqtt-library.html">mqtt</a></li>
+      <li><a href="os/os-library.html">os</a></li>
+      <li><a href="raspberry_pi/raspberry_pi-library.html">raspberry_pi</a></li>
+      <li><a href="socket/socket-library.html">socket</a></li>
+      <li><a href="stm32f746g_disco/stm32f746g_disco-library.html">stm32f746g_disco</a></li>
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="desc markdown">
+    
+          <p>GPIO support providing access to controlling GPIO pins.</p>
+<p>Currently this has only been tested with a Raspberry Pi 2 and the
+STM32F746G-Discovery board.</p>
+<h2>Access types</h2>
+<p>There are two ways of accessing the GPIO pins: direct access or
+access through a Sysfs driver.</p>
+<p>When direct access is used, the physical memory addresses, where the
+SoC registers for the GPIO pins are mapped, are accessed directly. If this
+is on Linux on the Raspberry Pi this always requires root access.</p>
+<p>On Linux on the Raspberry Pi the Sysfs driver is also an option. As this
+uses the filesystem under <code>/sys/class/gpio</code>; root access is also required
+by default. However this can be changed through udev rules, e.g. by
+adding a file to <code>/etc/udev/rules.d</code>. In addition the Sysfs driver
+supports state change notifications.</p>
+<h2>Usage on Raspberry Pi 2</h2>
+<pre class="dart prettyprint lang-dart"><code>import 'package:gpio/gpio.dart';
+import 'package:raspberry_pi/raspberry_pi.dart';
+
+main() {
+  // Initialize Raspberry Pi and configure the pins.
+  RaspberryPi pi = new RaspberryPi();
+  Gpio gpio = pi.memoryMappedGPIO;
+  GpioOutputPin pin = gpio.initOutput(RaspberryPiPin.GPIO6);
+
+  // Access pin.
+  pin.state =  true;
+</code></pre>
+<h2>Usage on STM32F7746G Discovery board</h2>
+<pre class="dart prettyprint lang-dart"><code>import 'package:gpio/gpio.dart';
+import 'package:stm32f746g_disco/stm32f746g_disco.dart';
+
+main() {
+  // Initialize STM32F746G Discovery board and configure the pins.
+  STM32F746GDiscovery board = new STM32F746GDiscovery();
+  GpioOutputPin pin = board.gpio.initOutput(STM32F746GDiscovery.LED1);
+
+  // Access pin.
+  pin.state =  true;
+</code></pre>
+<p>See <code>samples/raspberry_pi/</code> and <code>samples/stm32f746g-discovery</code> for
+additional details.</p>
+<h2>Reporting issues</h2>
+<p>Please file an issue <a href="https://github.com/dartino/sdk/issues/new?title=Add%20title&amp;labels=Area-Package&amp;body=%3Cissue%20description%3E%0A%3Crepro%20steps%3E%0A%3Cexpected%20outcome%3E%0A%3Cactual%20outcome%3E">in the issue
+tracker</a>.</p>
+    
+    </section>
+
+
+
+
+
+    <section class="summary offset-anchor" id="enums">
+        <h2>Enums</h2>
+
+        <dl>
+            <dt id="GpioInterruptTrigger">
+                <a class="" href="gpio/GpioInterruptTrigger-class.html">GpioInterruptTrigger</a>
+            </dt>
+            <dd>
+                <p>Interrupt triggers.</p>
+            </dd>
+            <dt id="GpioPullUpDown">
+                <a class="" href="gpio/GpioPullUpDown-class.html">GpioPullUpDown</a>
+            </dt>
+            <dd>
+                <p>Pull-up/down resistor state.</p>
+            </dd>
+        </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="classes">
+        <h2>Classes</h2>
+
+        <dl>
+            <dt id="Gpio">
+                <span class="name "><a class="" href="gpio/Gpio-class.html">Gpio</a></span>
+            </dt>
+            <dd>
+                <p>Access to GPIO interface to configure GPIO pins.</p>
+            </dd>
+            <dt id="GpioInputPin">
+                <span class="name "><a class="" href="gpio/GpioInputPin-class.html">GpioInputPin</a></span>
+            </dt>
+            <dd>
+                <p>Pin on a MCU/SoC configured for GPIO input.</p>
+            </dd>
+            <dt id="GpioOutputPin">
+                <span class="name "><a class="" href="gpio/GpioOutputPin-class.html">GpioOutputPin</a></span>
+            </dt>
+            <dd>
+                <p>Pin on a MCU/SoC configured for GPIO output.</p>
+            </dd>
+            <dt id="GpioPin">
+                <span class="name "><a class="" href="gpio/GpioPin-class.html">GpioPin</a></span>
+            </dt>
+            <dd>
+                <p>Pin on a MCU/SoC configured for GPIO operation.<a href="gpio/GpioPin-class.html">&hellip;</a>
+</p>
+            </dd>
+            <dt id="Pin">
+                <span class="name "><a class="" href="gpio/Pin-class.html">Pin</a></span>
+            </dt>
+            <dd>
+                <p>Describes a pin on a MCU/SoC.<a href="gpio/Pin-class.html">&hellip;</a>
+</p>
+            </dd>
+            <dt id="SysfsGpio">
+                <span class="name "><a class="" href="gpio/SysfsGpio-class.html">SysfsGpio</a></span>
+            </dt>
+            <dd>
+                <p>Provide GPIO access using the Sysfs Interface for Userspace.<a href="gpio/SysfsGpio-class.html">&hellip;</a>
+</p>
+            </dd>
+            <dt id="SysfsPin">
+                <span class="name "><a class="" href="gpio/SysfsPin-class.html">SysfsPin</a></span>
+            </dt>
+            <dd>
+                <p>Concrete pins on a Sysfs GPIO interface.</p>
+            </dd>
+        </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="exceptions">
+        <h2>Exceptions / Errors</h2>
+
+        <dl>
+            <dt id="GpioException">
+                <span class="name "><a class="" href="gpio/GpioException-class.html">GpioException</a></span>
+            </dt>
+            <dd>
+                <p>Exceptions thrown by GPIO.</p>
+            </dd>
+        </dl>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <h5>gpio</h5>
+    <ol>
+    
+    
+    
+    
+      <li class="section-title"><a href="gpio/gpio-library.html#enums">Enums</a></li>
+      <li><a class="" href="gpio/GpioInterruptTrigger-class.html">GpioInterruptTrigger</a></li>
+      <li><a class="" href="gpio/GpioPullUpDown-class.html">GpioPullUpDown</a></li>
+    
+      <li class="section-title"><a href="gpio/gpio-library.html#classes">Classes</a></li>
+      <li><a class="" href="gpio/Gpio-class.html">Gpio</a></li>
+      <li><a class="" href="gpio/GpioInputPin-class.html">GpioInputPin</a></li>
+      <li><a class="" href="gpio/GpioOutputPin-class.html">GpioOutputPin</a></li>
+      <li><a class="" href="gpio/GpioPin-class.html">GpioPin</a></li>
+      <li><a class="" href="gpio/Pin-class.html">Pin</a></li>
+      <li><a class="" href="gpio/SysfsGpio-class.html">SysfsGpio</a></li>
+      <li><a class="" href="gpio/SysfsPin-class.html">SysfsPin</a></li>
+    
+      <li class="section-title"><a href="gpio/gpio-library.html#exceptions">Exceptions</a></li>
+      <li><a class="" href="gpio/GpioException-class.html">GpioException</a></li>
+    </ol>
+  </div><!--/sidebar-offcanvas-right-->
+
+
+  </div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  Dartino_SDK 
+                </span>
+                &bull;
+                <span class="no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.7.4 -->
+</body>
+
+</html>
