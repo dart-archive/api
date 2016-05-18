@@ -91,17 +91,10 @@
     
       <li class="section-title"><a href="mbedtls/TLSSocket-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="mbedtls/TLSSocket/available.html">available</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/buf.html">buf</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/cacert.html">cacert</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/conf.html">conf</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/ctr_drbg.html">ctr_drbg</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/entropy.html">entropy</a></li>
       <li><a class="" href="mbedtls/TLSSocket/hashCode.html">hashCode</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/pers.html">pers</a></li>
       <li><a class="" href="mbedtls/TLSSocket/port.html">port</a></li>
       <li><a class="" href="mbedtls/TLSSocket/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="mbedtls/TLSSocket/server.html">server</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/ssl.html">ssl</a></li>
     
       <li class="section-title"><a href="mbedtls/TLSSocket-class.html#constructors">Constructors</a></li>
       <li><a href="mbedtls/TLSSocket/TLSSocket.connect.html">connect</a></li>
@@ -138,12 +131,13 @@
     <section class="summary source-code" id="source">
       <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">void write(ByteBuffer buffer) {
+  _throwIfClosed();
   // getForeign is not public, TODO(ricow): revisit this
   var buf = buffer;
   var foreign = buf.getForeign();
-  var ret = mbedtls_ssl_write.icall$3(ssl, foreign, buffer.lengthInBytes);
+  var ret = _mbedtls_ssl_write.icall$3(_ssl, foreign, buffer.lengthInBytes);
   while (_handleBuffers(ret)) {
-     ret = mbedtls_ssl_write.icall$3(ssl, foreign, buffer.lengthInBytes);
+     ret = _mbedtls_ssl_write.icall$3(_ssl, foreign, buffer.lengthInBytes);
   }
   if (ret &lt; 0) {
     throw new TLSException(

@@ -92,17 +92,10 @@
     
       <li class="section-title"><a href="mbedtls/TLSSocket-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="mbedtls/TLSSocket/available.html">available</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/buf.html">buf</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/cacert.html">cacert</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/conf.html">conf</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/ctr_drbg.html">ctr_drbg</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/entropy.html">entropy</a></li>
       <li><a class="" href="mbedtls/TLSSocket/hashCode.html">hashCode</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/pers.html">pers</a></li>
       <li><a class="" href="mbedtls/TLSSocket/port.html">port</a></li>
       <li><a class="" href="mbedtls/TLSSocket/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="mbedtls/TLSSocket/server.html">server</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/ssl.html">ssl</a></li>
     
       <li class="section-title"><a href="mbedtls/TLSSocket-class.html#constructors">Constructors</a></li>
       <li><a href="mbedtls/TLSSocket/TLSSocket.connect.html">connect</a></li>
@@ -144,68 +137,72 @@
   _sendBuffer = new CircularByteBuffer(1024);
   _recvBuffer = new CircularByteBuffer(1024);
   _foreignBuffers = _getForeignFromBuffers(_sendBuffer, _recvBuffer);
-  mbedtls_ssl_init.vcall$1(ssl);
-  mbedtls_ssl_config_init.vcall$1(conf);
-  mbedtls_x509_crt_init.vcall$1(cacert);
-  mbedtls_ctr_drbg_init.vcall$1(ctr_drbg);
-  mbedtls_entropy_init.vcall$1(entropy);
-  var result = mbedtls_ctr_drbg_seed.icall$5(ctr_drbg, mbedtls_entropy_func,
-                                             entropy, pers, pers.length);
+  _mbedtls_ssl_init.vcall$1(_ssl);
+  _mbedtls_ssl_config_init.vcall$1(_conf);
+  _mbedtls_x509_crt_init.vcall$1(_cacert);
+  _mbedtls_ctr_drbg_init.vcall$1(_ctr_drbg);
+  _mbedtls_entropy_init.vcall$1(_entropy);
+  var pers =
+      new ForeignMemory.fromStringAsUTF8(&apos;ssl_client_dartino&apos;);
+  var result = _mbedtls_ctr_drbg_seed.icall$5(_ctr_drbg, _mbedtls_entropy_func,
+      _entropy, pers, pers.length);
+  pers.free();
   if (result != 0) {
     throw new TLSException(
         &quot;mbedtls_ctr_drbg_seed returned non 0 value of $result&quot;);
   }
 
   var mbedtls_test_cas_pem_len_size =
-      _getSize_tValue(mbedtls_test_cas_pem_len);
-  result = mbedtls_x509_crt_parse.icall$3(cacert, mbedtls_test_cas_pem,
-                                          mbedtls_test_cas_pem_len_size);
+      _getSize_tValue(_mbedtls_test_cas_pem_len);
+  result = _mbedtls_x509_crt_parse.icall$3(_cacert, _mbedtls_test_cas_pem,
+      mbedtls_test_cas_pem_len_size);
   if (result != 0) {
     throw new TLSException(
         &quot;mbedtls_x509_crt_parse returned non 0 value $result&quot;);
   }
 
-  result = mbedtls_ssl_config_defaults.icall$4(conf,
-                                               MBEDTLS_SSL_IS_CLIENT,
-                                               MBEDTLS_SSL_TRANSPORT_STREAM,
-                                               MBEDTLS_SSL_PRESET_DEFAULT);
+  result = _mbedtls_ssl_config_defaults.icall$4(
+      _conf,
+      MBEDTLS_SSL_IS_CLIENT,
+      MBEDTLS_SSL_TRANSPORT_STREAM,
+      MBEDTLS_SSL_PRESET_DEFAULT);
   if (result != 0) {
     throw new TLSException(
         &quot;mbedtls_ssl_config_defaults returned non 0 value: $result&quot;);
   }
 
-  mbedtls_ssl_conf_authmode.vcall$2(conf,  MBEDTLS_SSL_VERIFY_OPTIONAL);
-  mbedtls_ssl_conf_ca_chain.vcall$3(conf, cacert, ForeignPointer.NULL);
-  mbedtls_ssl_conf_rng.vcall$3(conf, mbedtls_ctr_drbg_random, ctr_drbg);
-  result = mbedtls_ssl_setup.icall$2(ssl, conf);
+  _mbedtls_ssl_conf_authmode.vcall$2(_conf,  MBEDTLS_SSL_VERIFY_OPTIONAL);
+  _mbedtls_ssl_conf_ca_chain.vcall$3(_conf, _cacert, ForeignPointer.NULL);
+  _mbedtls_ssl_conf_rng.vcall$3(_conf, _mbedtls_ctr_drbg_random, _ctr_drbg);
+  result = _mbedtls_ssl_setup.icall$2(_ssl, _conf);
   if (result != 0) {
     throw new TLSException(&quot;mbedtls_ssl_setup returned non 0 value $result&quot;);
   }
   var serverHostName = new ForeignMemory.fromStringAsUTF8(&apos;no_used&apos;);
-  result = mbedtls_ssl_set_hostname.icall$2(ssl, serverHostName);
+  result = _mbedtls_ssl_set_hostname.icall$2(_ssl, serverHostName);
   serverHostName.free();
   if (result != 0) {
     throw new TLSException(
         &quot;mbedtls_ssl_set_hostname returned non 0 value $result&quot;);
   }
-  mbedtls_ssl_set_bio.vcall$5(ssl, _foreignBuffers.address, dart_send,
-                              dart_recv, ForeignPointer.NULL);
-  result = mbedtls_ssl_handshake.icall$1(ssl);
+  _mbedtls_ssl_set_bio.vcall$5(_ssl, _foreignBuffers.address, _dart_send,
+      _dart_recv, ForeignPointer.NULL);
+  result = _mbedtls_ssl_handshake.icall$1(_ssl);
   while (_handleBuffers(result)) {
-    result = mbedtls_ssl_handshake.icall$1(ssl);
+    result = _mbedtls_ssl_handshake.icall$1(_ssl);
   }
   if (result &lt; 0) {
     throw new TLSException(
         &quot;mbedtls_ssl_handshake returned ${result.toRadixString(16)}&quot;);
   }
 
-  var flags = mbedtls_ssl_get_verify_result.icall$1(ssl);
+  var flags = _mbedtls_ssl_get_verify_result.icall$1(_ssl);
   // In real life, we probably want to bail out when flags != 0
   if (flags != 0 &amp;&amp; failOnCertificate) {
     var vrfy_buf = new ForeignMemory.allocatedFinalized(512);
     var input = new ForeignMemory.fromStringAsUTF8(&apos;  !  &apos;);
-    mbedtls_x509_crt_verify_info.vcall$4(vrfy_buf, vrfy_buf.length,
-                                         input, flags);
+    _mbedtls_x509_crt_verify_info.vcall$4(vrfy_buf, vrfy_buf.length,
+                                          input, flags);
     input.free();
     throw new TLSException(cStringToString(vrfy_buf));
   }

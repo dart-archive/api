@@ -91,17 +91,10 @@
     
       <li class="section-title"><a href="mbedtls/TLSSocket-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="mbedtls/TLSSocket/available.html">available</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/buf.html">buf</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/cacert.html">cacert</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/conf.html">conf</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/ctr_drbg.html">ctr_drbg</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/entropy.html">entropy</a></li>
       <li><a class="" href="mbedtls/TLSSocket/hashCode.html">hashCode</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/pers.html">pers</a></li>
       <li><a class="" href="mbedtls/TLSSocket/port.html">port</a></li>
       <li><a class="" href="mbedtls/TLSSocket/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="mbedtls/TLSSocket/server.html">server</a></li>
-      <li><a class="" href="mbedtls/TLSSocket/ssl.html">ssl</a></li>
     
       <li class="section-title"><a href="mbedtls/TLSSocket-class.html#constructors">Constructors</a></li>
       <li><a href="mbedtls/TLSSocket/TLSSocket.connect.html">connect</a></li>
@@ -143,22 +136,22 @@ be freed since we have no way of registering dealloc callbacks.</p>
     <section class="summary source-code" id="source">
       <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">void close() {
-  mbedtls_ssl_close_notify.icall$1(ssl);
-  mbedtls_x509_crt_free.icall$1(cacert);
-  mbedtls_ssl_free.icall$1(ssl);
-  mbedtls_ssl_config_free.icall$1(conf);
-  mbedtls_ctr_drbg_free.icall$1(ctr_drbg);
-  mbedtls_entropy_free.icall$1(entropy);
+  _throwIfClosed();
+  _mbedtls_ssl_close_notify.icall$1(_ssl);
+  _mbedtls_x509_crt_free.icall$1(_cacert);
+  _mbedtls_ssl_free.icall$1(_ssl);
+  _mbedtls_ssl_config_free.icall$1(_conf);
+  _mbedtls_ctr_drbg_free.icall$1(_ctr_drbg);
+  _mbedtls_entropy_free.icall$1(_entropy);
   // The free calls above does not actually free the structs, just all
   // referenced structs.
-  ssl.free();
-  cacert.free();
-  conf.free();
-  ctr_drbg.free();
-  entropy.free();
-  buf.free();
-  pers.free();
+  _ssl.free();
+  _cacert.free();
+  _conf.free();
+  _ctr_drbg.free();
+  _entropy.free();
   _socket.close();
+  _socket = null;
 }</code></pre>
     </section>
 
