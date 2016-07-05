@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mqtt library - Dart API</title>
-    <!-- required because all the links are pseudo-absolute -->
-    <base href="..">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="mqtt library API docs, for the Dart programming language.">
+  <title>mqtt library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
 
-    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="static-assets/prettify.css">
-    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
 
-    <meta name="description" content="mqtt library API docs, for the Dart programming language.">
-    <link rel="icon" href="static-assets/favicon.png">
-
-    <!-- Do not remove placeholder -->
-    <!-- Header Placeholder -->
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
 </head>
 
 <body>
@@ -25,44 +24,44 @@
 <div id="overlay-under-drawer"></div>
 
 <header class="container-fluid" id="title">
-    <nav class="navbar navbar-fixed-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 contents">
-              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-              <ol class="breadcrumbs gt-separated hidden-xs">
-                  <li><a href="index.html">Dartino_SDK</a></li>
-                  <li class="self-crumb">mqtt</li>
-              </ol>
-              <div class="self-name">mqtt</div>
-              <form class="search navbar-right" role="search">
-                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
-              </form>
-            </div> <!-- /col -->
-          </div> <!-- /row -->
-        </div> <!-- /container -->
-    </nav>
-
-    <div class="container masthead">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
       <div class="row">
         <div class="col-sm-12 contents">
-          <ol class="breadcrumbs gt-separated visible-xs">
-              <li><a href="index.html">Dartino_SDK</a></li>
-              <li class="self-crumb">mqtt</li>
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">Dartino libraries</a></li>
+            <li class="self-crumb">mqtt</li>
           </ol>
-          <div class="title-description">
-              <h1 class="title">
-                  <div class="kind">library</div> mqtt
-              </h1>
-          </div>
-          <ul class="subnav">
-              <li><a href="mqtt/mqtt-library.html#constants">Constants</a></li>
-              <li><a href="mqtt/mqtt-library.html#functions">Functions</a></li>
-              <li><a href="mqtt/mqtt-library.html#classes">Classes</a></li>
-          </ul>
+          <div class="self-name">mqtt</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
         </div> <!-- /col -->
       </div> <!-- /row -->
     </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">Dartino libraries</a></li>
+          <li class="self-crumb">mqtt</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">library</span> mqtt
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="mqtt/mqtt-library.html#constants">Constants</a></li>
+          <li><a href="mqtt/mqtt-library.html#functions">Functions</a></li>
+          <li><a href="mqtt/mqtt-library.html#classes">Classes</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
 
 </header>
 
@@ -70,36 +69,81 @@
   <div class="row">
 
   <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
-    <h5><a href="index.html">Dartino_SDK</a></h5>
+    <h5><a href="index.html">Dartino libraries</a></h5>
 
     <ol>
-      <li class="section-title"><a href="index.html">Libraries</a></li>
-      <li><a href="dartino/dartino-library.html">dartino</a></li>
-      <li><a href="ffi/ffi-library.html">ffi</a></li>
-      <li><a href="file/file-library.html">file</a></li>
-      <li><a href="gpio/gpio-library.html">gpio</a></li>
-      <li><a href="http/http-library.html">http</a></li>
-      <li><a href="i2c/i2c-library.html">i2c</a></li>
-      <li><a href="mbedtls/mbedtls-library.html">mbedtls</a></li>
-      <li><a href="mqtt/mqtt-library.html">mqtt</a></li>
-      <li><a href="os/os-library.html">os</a></li>
-      <li><a href="raspberry_pi/raspberry_pi-library.html">raspberry_pi</a></li>
-      <li><a href="socket/socket-library.html">socket</a></li>
-      <li><a href="stm32/stm32-library.html">stm32</a></li>
+        <li class="section-title">Dart Core</li>
+        <li><a href="dart-collection/dart-collection-library.html">dart:collection</a></li>
+        <li><a href="dart-core/dart-core-library.html">dart:core</a></li>
+        <li><a href="dart-dartino/dart-dartino-library.html">dart:dartino</a></li>
+        <li><a href="dart-dartino.ffi/dart-dartino.ffi-library.html">dart:dartino.ffi</a></li>
+        <li><a href="dart-dartino.os/dart-dartino.os-library.html">dart:dartino.os</a></li>
+        <li><a href="dart-dartino.service/dart-dartino.service-library.html">dart:dartino.service</a></li>
+        <li><a href="dart-math/dart-math-library.html">dart:math</a></li>
+        <li><a href="dart-typed_data/dart-typed_data-library.html">dart:typed_data</a></li>
+        <li class="section-title">charcode</li>
+        <li><a href="charcode/charcode-library.html">charcode</a></li>
+        <li><a href="charcode.ascii.dollar_lowercase/charcode.ascii.dollar_lowercase-library.html">charcode.ascii.dollar_lowercase</a></li>
+        <li><a href="charcode.htmlentity.dollar_lowercase/charcode.htmlentity.dollar_lowercase-library.html">charcode.htmlentity.dollar_lowercase</a></li>
+        <li class="section-title">dartino</li>
+        <li><a href="dartino/dartino-library.html">dartino</a></li>
+        <li class="section-title">ffi</li>
+        <li><a href="ffi/ffi-library.html">ffi</a></li>
+        <li class="section-title">file</li>
+        <li><a href="file/file-library.html">file</a></li>
+        <li class="section-title">gpio</li>
+        <li><a href="gpio/gpio-library.html">gpio</a></li>
+        <li><a href="gpio_mock/gpio_mock-library.html">gpio_mock</a></li>
+        <li class="section-title">http</li>
+        <li><a href="http/http-library.html">http</a></li>
+        <li class="section-title">i2c</li>
+        <li><a href="hts221/hts221-library.html">hts221</a></li>
+        <li><a href="i2c/i2c-library.html">i2c</a></li>
+        <li><a href="lis3mdl/lis3mdl-library.html">lis3mdl</a></li>
+        <li><a href="lps25h/lps25h-library.html">lps25h</a></li>
+        <li><a href="lsm6ds0/lsm6ds0-library.html">lsm6ds0</a></li>
+        <li><a href="lsm9ds1/lsm9ds1-library.html">lsm9ds1</a></li>
+        <li class="section-title">mbedtls</li>
+        <li><a href="mbedtls/mbedtls-library.html">mbedtls</a></li>
+        <li class="section-title">mqtt</li>
+        <li><a href="mqtt/mqtt-library.html">mqtt</a></li>
+        <li class="section-title">nucleo_iks01a1</li>
+        <li><a href="nucleo_iks01a1/nucleo_iks01a1-library.html">nucleo_iks01a1</a></li>
+        <li class="section-title">os</li>
+        <li><a href="os/os-library.html">os</a></li>
+        <li class="section-title">raspberry_pi</li>
+        <li><a href="raspberry_pi/raspberry_pi-library.html">raspberry_pi</a></li>
+        <li><a href="raspberry_pi.sense_hat/raspberry_pi.sense_hat-library.html">raspberry_pi.sense_hat</a></li>
+        <li class="section-title">socket</li>
+        <li><a href="socket/socket-library.html">socket</a></li>
+        <li class="section-title">stm32</li>
+        <li><a href="stm32/stm32-library.html">stm32</a></li>
+        <li><a href="stm32.adc/stm32.adc-library.html">stm32.adc</a></li>
+        <li><a href="stm32.button/stm32.button-library.html">stm32.button</a></li>
+        <li><a href="stm32.ethernet/stm32.ethernet-library.html">stm32.ethernet</a></li>
+        <li><a href="stm32.gpio/stm32.gpio-library.html">stm32.gpio</a></li>
+        <li><a href="stm32.i2c/stm32.i2c-library.html">stm32.i2c</a></li>
+        <li><a href="stm32.lcd/stm32.lcd-library.html">stm32.lcd</a></li>
+        <li><a href="stm32.socket/stm32.socket-library.html">stm32.socket</a></li>
+        <li><a href="stm32.stm32f411re_nucleo/stm32.stm32f411re_nucleo-library.html">stm32.stm32f411re_nucleo</a></li>
+        <li><a href="stm32.stm32f746g_discovery/stm32.stm32f746g_discovery-library.html">stm32.stm32f746g_discovery</a></li>
+        <li><a href="stm32.ts/stm32.ts-library.html">stm32.ts</a></li>
+        <li><a href="stm32.uart/stm32.uart-library.html">stm32.uart</a></li>
+
     </ol>
+
   </div>
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
-    
-          <p>MQTT client library for the <a href="http://mqtt.org/">MQTT protocol</a>, a lightweight
+      <p>MQTT client library for the <a href="http://mqtt.org/">MQTT protocol</a>, a lightweight
 IoT pub/sub messaging protocol.</p>
 <p>The implementation uses the <a href="http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.c.git/about/">Paho C client
 library</a>.</p>
 <h2>Usage</h2>
 <h3>Subscribing to messages</h3>
-<pre class="dart prettyprint lang-dart"><code>void main() {
+<pre class="dart prettyprint"><code>void main() {
   // Create MQTT client and configure subscriptions
   Client c = new Client('tcp://test.mosquitto.org:1883', 'test123-client2');
   c.AddSubscriber('/foo/bar' , messageHandler);
@@ -119,7 +163,7 @@ void messageHandler(String msg, String topic) {
 </code></pre>
 <p>See <code>/pkg/mqtt/subscribe-sample.dart/</code> for additional details.</p>
 <h3>Publishing messages</h3>
-<pre class="dart prettyprint lang-dart"><code>void main() {
+<pre class="dart prettyprint"><code>void main() {
   // Create MQTT client and publish a message
   Client c = new Client('tcp://test.mosquitto.org:1883', 'test123-client1');
   c.Publish('Hello, World', '/foo/bar');
@@ -130,108 +174,104 @@ void messageHandler(String msg, String topic) {
 </code></pre>
 <p>See <code>/pkg/mqtt/publish-sample.dart/</code> for additional details.</p>
 <h2>Dependencies</h2>
-<p>This Dart library depends on the <a href="http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.c.git/about/">Paho C
+<p>This Dart library depends on the <a href="https://github.com/eclipse/paho.mqtt.c">Paho C
 library</a>.
 It will load the Paho shared object file (.so file) dynamically at runtime.
 Therefore the Paho shared object file needs to be copied into the Dartino
 SDK. Follow these instructions to compile and copy the library:</p><ol><li>Get the Paho source code</li></ol>
-<pre class="prettyprint lang-dart"><code>$ git clone https://git.eclipse.org/r/paho/org.eclipse.paho.mqtt.c
+<pre class="prettyprint lang-dart"><code>$ git clone git@github.com:eclipse/paho.mqtt.c.git
 </code></pre><ol><li>Compile the source code</li></ol>
-<pre class="prettyprint lang-dart"><code>$ cd org.eclipse.paho.mqtt.c/
+<p><em>Note</em>: See the <a href="https://github.com/eclipse/paho.mqtt.c/blob/master/README.md">Paho readme</a> for details.</p>
+<pre class="prettyprint lang-dart"><code>$ cd paho.mqtt.c/
 $ make
 </code></pre><ol><li>
 <p>Copy the library to the lib directory Dartino SDK (substitute <code>&lt;Dartino
 SDK location&gt;</code> with the location where you installed the Dartino SDK, e.g.
 ~/dartino-sdk/)</p></li></ol>
-<pre class="prettyprint lang-dart"><code>$ cd org.eclipse.paho.mqtt.c/
+<pre class="prettyprint lang-dart"><code>$ cd paho.mqtt.c/
 $ cp build/output/libpaho-mqtt3c.so &lt;Dartino SDK location&gt;/lib/
 
 </code></pre>
 <h2>Reporting issues</h2>
 <p>Please file an issue <a href="https://github.com/dartino/sdk/issues/new?title=Add%20title&amp;labels=Area-Package&amp;body=%3Cissue%20description%3E%0A%3Crepro%20steps%3E%0A%3Cexpected%20outcome%3E%0A%3Cactual%20outcome%3E">in the issue tracker</a>.</p>
-    
     </section>
-
+    
     <section class="summary offset-anchor" id="constants">
-        <h2>Constants</h2>
+      <h2>Constants</h2>
 
-        <dl class="properties">
-            <dt id="protocolVersionNegotiate" class="constant">
-                <span class="name "><a class="" href="mqtt/protocolVersionNegotiate.html">protocolVersionNegotiate</a></span>
-                <span class="signature">&#8594; int</span>
-            </dt>
-            <dd>
-                <p>Attempt to connect with MQTT 3.1.1, and if that fails, falls back to 3.1.</p>
-                <div>
-                  <span class="features">const</span>
-                  <span class="signature"><code>0</code></span>
-                </div>
-            </dd>
-            <dt id="protocolVersionOnly_3_1" class="constant">
-                <span class="name "><a class="" href="mqtt/protocolVersionOnly_3_1.html">protocolVersionOnly_3_1</a></span>
-                <span class="signature">&#8594; int</span>
-            </dt>
-            <dd>
-                <p>Connect only using MQTT 3.1</p>
-                <div>
-                  <span class="features">const</span>
-                  <span class="signature"><code>3</code></span>
-                </div>
-            </dd>
-            <dt id="protocolVersionOnly_3_1_1" class="constant">
-                <span class="name "><a class="" href="mqtt/protocolVersionOnly_3_1_1.html">protocolVersionOnly_3_1_1</a></span>
-                <span class="signature">&#8594; int</span>
-            </dt>
-            <dd>
-                <p>Connect only using MQTT 3.1.1</p>
-                <div>
-                  <span class="features">const</span>
-                  <span class="signature"><code>4</code></span>
-                </div>
-            </dd>
-        </dl>
+      <dl class="properties">
+        <dt id="protocolVersionNegotiate" class="constant">
+          <span class="name "><a href="mqtt/protocolVersionNegotiate-constant.html">protocolVersionNegotiate</a></span>
+          <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span>
+        </dt>
+        <dd>
+          <p>Attempt to connect with MQTT 3.1.1, and if that fails, falls back to 3.1.</p>
+          <div>
+            <span class="signature"><code>0</code></span>
+          </div>
+        </dd>
+        <dt id="protocolVersionOnly_3_1" class="constant">
+          <span class="name "><a href="mqtt/protocolVersionOnly_3_1-constant.html">protocolVersionOnly_3_1</a></span>
+          <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span>
+        </dt>
+        <dd>
+          <p>Connect only using MQTT 3.1</p>
+          <div>
+            <span class="signature"><code>3</code></span>
+          </div>
+        </dd>
+        <dt id="protocolVersionOnly_3_1_1" class="constant">
+          <span class="name "><a href="mqtt/protocolVersionOnly_3_1_1-constant.html">protocolVersionOnly_3_1_1</a></span>
+          <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span>
+        </dt>
+        <dd>
+          <p>Connect only using MQTT 3.1.1</p>
+          <div>
+            <span class="signature"><code>4</code></span>
+          </div>
+        </dd>
+      </dl>
     </section>
 
 
 
     <section class="summary offset-anchor" id="functions">
-        <h2>Functions</h2>
+      <h2>Functions</h2>
 
-        <dl class="callables">
-            <dt id="disconnect" class="callable">
-                <span class="name "><a class="" href="mqtt/disconnect.html">disconnect</a></span><span class="signature">(<wbr>)
-                    <span class="returntype parameter">&#8594; void</span>
-                </span>
-            </dt>
-            <dd>
-                <p>Disconnect the client, and free all resources.</p>
-            </dd>
-            <dt id="startSubscriptionProcessing" class="callable">
-                <span class="name "><a class="" href="mqtt/startSubscriptionProcessing.html">startSubscriptionProcessing</a></span><span class="signature">(<wbr>)
-                    <span class="returntype parameter">&#8594; void</span>
-                </span>
-            </dt>
-            <dd>
-                <p>Begin processing of incoming messages. If any received messages match
+      <dl class="callables">
+        <dt id="disconnect" class="callable">
+          <span class="name"><a href="mqtt/disconnect.html">disconnect</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Disconnect the client, and free all resources.</p>
+        </dd>
+        <dt id="startSubscriptionProcessing" class="callable">
+          <span class="name"><a href="mqtt/startSubscriptionProcessing.html">startSubscriptionProcessing</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Begin processing of incoming messages. If any received messages match
 topic subscribed to via the <code>AddSubscriber</code> event handlers will be called.
 The processing happens in a separate process, so this call non-blocking.</p>
-            </dd>
-        </dl>
+        </dd>
+      </dl>
     </section>
 
 
     <section class="summary offset-anchor" id="classes">
-        <h2>Classes</h2>
+      <h2>Classes</h2>
 
-        <dl>
-            <dt id="Client">
-                <span class="name "><a class="" href="mqtt/Client-class.html">Client</a></span>
-            </dt>
-            <dd>
-                <p>MQTT Client class<a href="mqtt/Client-class.html">&hellip;</a>
-</p>
-            </dd>
-        </dl>
+      <dl>
+        <dt id="Client">
+          <span class="name "><a href="mqtt/Client-class.html">Client</a></span>
+        </dt>
+        <dd>
+          <p>MQTT Client class</p>
+        </dd>
+      </dl>
     </section>
 
 
@@ -241,57 +281,56 @@ The processing happens in a separate process, so this call non-blocking.</p>
     <h5>mqtt</h5>
     <ol>
       <li class="section-title"><a href="mqtt/mqtt-library.html#constants">Constants</a></li>
-      <li><a class="" href="mqtt/protocolVersionNegotiate.html">protocolVersionNegotiate</a></li>
-      <li><a class="" href="mqtt/protocolVersionOnly_3_1.html">protocolVersionOnly_3_1</a></li>
-      <li><a class="" href="mqtt/protocolVersionOnly_3_1_1.html">protocolVersionOnly_3_1_1</a></li>
+      <li><a href="mqtt/protocolVersionNegotiate-constant.html">protocolVersionNegotiate</a></li>
+      <li><a href="mqtt/protocolVersionOnly_3_1-constant.html">protocolVersionOnly_3_1</a></li>
+      <li><a href="mqtt/protocolVersionOnly_3_1_1-constant.html">protocolVersionOnly_3_1_1</a></li>
     
     
     
       <li class="section-title"><a href="mqtt/mqtt-library.html#functions">Functions</a></li>
-      <li><a class="" href="mqtt/disconnect.html">disconnect</a></li>
-      <li><a class="" href="mqtt/startSubscriptionProcessing.html">startSubscriptionProcessing</a></li>
+      <li><a href="mqtt/disconnect.html">disconnect</a></li>
+      <li><a href="mqtt/startSubscriptionProcessing.html">startSubscriptionProcessing</a></li>
     
     
       <li class="section-title"><a href="mqtt/mqtt-library.html#classes">Classes</a></li>
-      <li><a class="" href="mqtt/Client-class.html">Client</a></li>
+      <li><a href="mqtt/Client-class.html">Client</a></li>
     
     </ol>
   </div><!--/sidebar-offcanvas-right-->
 
-
-  </div> <!-- row -->
+</div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
-    <div class="container-fluid">
-        <div class="container">
-            <p class="text-center">
-                <span class="no-break">
-                  Dartino_SDK 
-                </span>
-                &bull;
-                <span class="no-break">
-                  <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
-                  </a>
-                </span>
-                &bull;
-                <span class="copyright no-break">
-                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
-                </span>
-            </p>
-        </div>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          Dartino libraries 0.5.0-dev.1.5
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
     </div>
+  </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.4 -->
 </body>
 
 </html>

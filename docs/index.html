@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dartino SDK - Dart API docs</title>
-    <!-- required because all the links are pseudo-absolute -->
-    <base href=".">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="made with love by dartdoc ">
+  <meta name="description" content="Dartino libraries API docs, for the Dart programming language.">
+  <title>Dartino libraries - Dart API docs</title>
 
-    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="static-assets/prettify.css">
-    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
 
-    <meta name="description" content="Dartino SDK API docs, for the Dart programming language.">
-    <link rel="icon" href="static-assets/favicon.png">
-
-    <!-- Do not remove placeholder -->
-    <!-- Header Placeholder -->
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
 </head>
 
 <body>
@@ -25,38 +23,38 @@
 <div id="overlay-under-drawer"></div>
 
 <header class="container-fluid" id="title">
-    <nav class="navbar navbar-fixed-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 contents">
-              <ol class="breadcrumbs gt-separated hidden-xs">
-                  <li class="self-crumb">Dartino SDK</li>
-              </ol>
-              <div class="self-name">Dartino SDK</div>
-              <form class="search navbar-right" role="search">
-                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
-              </form>
-            </div> <!-- /col -->
-          </div> <!-- /row -->
-        </div> <!-- /container -->
-    </nav>
-
-    <div class="container masthead">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
       <div class="row">
         <div class="col-sm-12 contents">
-          <ol class="breadcrumbs gt-separated visible-xs">
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li class="self-crumb">Dartino libraries</li>
           </ol>
-          <div class="title-description">
-              <h1 class="title">
-                  <div class="kind"></div> Dartino SDK
-              </h1>
-          </div>
-          <ul class="subnav">
-              <li><a href="index.html#libraries">Libraries</a></li>
-          </ul>
+          <div class="self-name">Dartino libraries</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
         </div> <!-- /col -->
       </div> <!-- /row -->
     </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">&nbsp;</span> Dartino libraries
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="index.html#libraries">Libraries</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
 
 </header>
 
@@ -64,174 +62,416 @@
   <div class="row">
 
   <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
-    <h5>Dartino SDK</h5>
+    <h5>Dartino libraries</h5>
 
     <ol>
-      <li class="section-title"><a href="index.html#libraries">Libraries</a></li>
-      <li><a class="" href="dartino/dartino-library.html">dartino</a></li>
-      <li><a class="" href="ffi/ffi-library.html">ffi</a></li>
-      <li><a class="" href="file/file-library.html">file</a></li>
-      <li><a class="" href="gpio/gpio-library.html">gpio</a></li>
-      <li><a class="" href="http/http-library.html">http</a></li>
-      <li><a class="" href="i2c/i2c-library.html">i2c</a></li>
-      <li><a class="" href="mbedtls/mbedtls-library.html">mbedtls</a></li>
-      <li><a class="" href="mqtt/mqtt-library.html">mqtt</a></li>
-      <li><a class="" href="os/os-library.html">os</a></li>
-      <li><a class="" href="raspberry_pi/raspberry_pi-library.html">raspberry_pi</a></li>
-      <li><a class="" href="socket/socket-library.html">socket</a></li>
-      <li><a class="" href="stm32/stm32-library.html">stm32</a></li>
+        <li class="section-title">Dart Core</li>
+        <li><a href="dart-collection/dart-collection-library.html">dart:collection</a></li>
+        <li><a href="dart-core/dart-core-library.html">dart:core</a></li>
+        <li><a href="dart-dartino/dart-dartino-library.html">dart:dartino</a></li>
+        <li><a href="dart-dartino.ffi/dart-dartino.ffi-library.html">dart:dartino.ffi</a></li>
+        <li><a href="dart-dartino.os/dart-dartino.os-library.html">dart:dartino.os</a></li>
+        <li><a href="dart-dartino.service/dart-dartino.service-library.html">dart:dartino.service</a></li>
+        <li><a href="dart-math/dart-math-library.html">dart:math</a></li>
+        <li><a href="dart-typed_data/dart-typed_data-library.html">dart:typed_data</a></li>
+        <li class="section-title">charcode</li>
+        <li><a href="charcode/charcode-library.html">charcode</a></li>
+        <li><a href="charcode.ascii.dollar_lowercase/charcode.ascii.dollar_lowercase-library.html">charcode.ascii.dollar_lowercase</a></li>
+        <li><a href="charcode.htmlentity.dollar_lowercase/charcode.htmlentity.dollar_lowercase-library.html">charcode.htmlentity.dollar_lowercase</a></li>
+        <li class="section-title">dartino</li>
+        <li><a href="dartino/dartino-library.html">dartino</a></li>
+        <li class="section-title">ffi</li>
+        <li><a href="ffi/ffi-library.html">ffi</a></li>
+        <li class="section-title">file</li>
+        <li><a href="file/file-library.html">file</a></li>
+        <li class="section-title">gpio</li>
+        <li><a href="gpio/gpio-library.html">gpio</a></li>
+        <li><a href="gpio_mock/gpio_mock-library.html">gpio_mock</a></li>
+        <li class="section-title">http</li>
+        <li><a href="http/http-library.html">http</a></li>
+        <li class="section-title">i2c</li>
+        <li><a href="hts221/hts221-library.html">hts221</a></li>
+        <li><a href="i2c/i2c-library.html">i2c</a></li>
+        <li><a href="lis3mdl/lis3mdl-library.html">lis3mdl</a></li>
+        <li><a href="lps25h/lps25h-library.html">lps25h</a></li>
+        <li><a href="lsm6ds0/lsm6ds0-library.html">lsm6ds0</a></li>
+        <li><a href="lsm9ds1/lsm9ds1-library.html">lsm9ds1</a></li>
+        <li class="section-title">mbedtls</li>
+        <li><a href="mbedtls/mbedtls-library.html">mbedtls</a></li>
+        <li class="section-title">mqtt</li>
+        <li><a href="mqtt/mqtt-library.html">mqtt</a></li>
+        <li class="section-title">nucleo_iks01a1</li>
+        <li><a href="nucleo_iks01a1/nucleo_iks01a1-library.html">nucleo_iks01a1</a></li>
+        <li class="section-title">os</li>
+        <li><a href="os/os-library.html">os</a></li>
+        <li class="section-title">raspberry_pi</li>
+        <li><a href="raspberry_pi/raspberry_pi-library.html">raspberry_pi</a></li>
+        <li><a href="raspberry_pi.sense_hat/raspberry_pi.sense_hat-library.html">raspberry_pi.sense_hat</a></li>
+        <li class="section-title">socket</li>
+        <li><a href="socket/socket-library.html">socket</a></li>
+        <li class="section-title">stm32</li>
+        <li><a href="stm32/stm32-library.html">stm32</a></li>
+        <li><a href="stm32.adc/stm32.adc-library.html">stm32.adc</a></li>
+        <li><a href="stm32.button/stm32.button-library.html">stm32.button</a></li>
+        <li><a href="stm32.ethernet/stm32.ethernet-library.html">stm32.ethernet</a></li>
+        <li><a href="stm32.gpio/stm32.gpio-library.html">stm32.gpio</a></li>
+        <li><a href="stm32.i2c/stm32.i2c-library.html">stm32.i2c</a></li>
+        <li><a href="stm32.lcd/stm32.lcd-library.html">stm32.lcd</a></li>
+        <li><a href="stm32.socket/stm32.socket-library.html">stm32.socket</a></li>
+        <li><a href="stm32.stm32f411re_nucleo/stm32.stm32f411re_nucleo-library.html">stm32.stm32f411re_nucleo</a></li>
+        <li><a href="stm32.stm32f746g_discovery/stm32.stm32f746g_discovery-library.html">stm32.stm32f746g_discovery</a></li>
+        <li><a href="stm32.ts/stm32.ts-library.html">stm32.ts</a></li>
+        <li><a href="stm32.uart/stm32.uart-library.html">stm32.uart</a></li>
+
     </ol>
+
   </div>
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
-
-      <section class="desc markdown">
       
-            <p>Welcome to the Dartino reference documentation covering the packages available
-for Dartino.</p>
-<p>You must import a package before you can use it. Here's an example of importing
-the <code>GPIO</code> package:</p>
-<pre class="dart"><code>import 'package:gpio/gpio.dart';
-</code></pre>
-<p>For more information on Dartino, see the <a href="https://dartino.org">Dartino
-site</a>.</p>
-<p>This API reference is automatically generated from the source code in the
-<a href="https://github.com/dartino/sdk">Dartino SDK repo</a>. If you'd like to
-contribute to this documentation, see
-<a href="https://github.com/dartino/sdk/wiki/Contributing">Contributing</a>.</p>
+        <section class="summary">
+          <h2>Dart Core</h2>
+          <dl>
+              <dt id="dart:collection">
+                <span class="name"><a href="dart-collection/dart-collection-library.html">dart:collection</a></span>
+              </dt>
+              <dd>
+                <p>Classes and utilities that supplement the collection support in dart:core.</p>
+              </dd>
+              <dt id="dart:core">
+                <span class="name"><a href="dart-core/dart-core-library.html">dart:core</a></span>
+              </dt>
+              <dd>
+                <p>The dart:core library for embedded dartino.</p>
+              </dd>
+              <dt id="dart:dartino">
+                <span class="name"><a href="dart-dartino/dart-dartino-library.html">dart:dartino</a></span>
+              </dt>
+              <dd>
+                
+              </dd>
+              <dt id="dart:dartino.ffi">
+                <span class="name"><a href="dart-dartino.ffi/dart-dartino.ffi-library.html">dart:dartino.ffi</a></span>
+              </dt>
+              <dd>
+                <p>A low-level 'foreign function interface' library that allows Dart code to
+call arbitrary native platform code defined outside the VM.</p>
+              </dd>
+              <dt id="dart:dartino.os">
+                <span class="name"><a href="dart-dartino.os/dart-dartino.os-library.html">dart:dartino.os</a></span>
+              </dt>
+              <dd>
+                
+              </dd>
+              <dt id="dart:dartino.service">
+                <span class="name"><a href="dart-dartino.service/dart-dartino.service-library.html">dart:dartino.service</a></span>
+              </dt>
+              <dd>
+                
+              </dd>
+              <dt id="dart:math">
+                <span class="name"><a href="dart-math/dart-math-library.html">dart:math</a></span>
+              </dt>
+              <dd>
+                <p>Mathematical constants and functions, plus a random number generator.</p>
+              </dd>
+              <dt id="dart:typed_data">
+                <span class="name"><a href="dart-typed_data/dart-typed_data-library.html">dart:typed_data</a></span>
+              </dt>
+              <dd>
+                <p>Lists that efficiently handle fixed sized data
+(for example, unsigned 8 byte integers) and SIMD numeric types.</p>
+              </dd>
+          </dl>
+        </section>
+        <section class="summary">
+          <h2>charcode</h2>
+          <dl>
+              <dt id="charcode">
+                <span class="name"><a href="charcode/charcode-library.html">charcode</a></span>
+              </dt>
+              <dd>
+                <p>Defines symbolic names for character code points.</p>
+              </dd>
+              <dt id="charcode.ascii.dollar_lowercase">
+                <span class="name"><a href="charcode.ascii.dollar_lowercase/charcode.ascii.dollar_lowercase-library.html">charcode.ascii.dollar_lowercase</a></span>
+              </dt>
+              <dd>
+                <p>Declare integer constants for each ASCII character.</p>
+              </dd>
+              <dt id="charcode.htmlentity.dollar_lowercase">
+                <span class="name"><a href="charcode.htmlentity.dollar_lowercase/charcode.htmlentity.dollar_lowercase-library.html">charcode.htmlentity.dollar_lowercase</a></span>
+              </dt>
+              <dd>
+                <p>Character codes based on HTML 4.01 character entity names.</p>
+              </dd>
+          </dl>
+        </section>
+        <section class="summary">
+          <h2>dartino</h2>
+          <dl>
+              <dt id="dartino">
+                <span class="name"><a href="dartino/dartino-library.html">dartino</a></span>
+              </dt>
+              <dd>
+                <p>Dartino utility package.</p>
+              </dd>
+          </dl>
+        </section>
+        <section class="summary">
+          <h2>ffi</h2>
+          <dl>
+              <dt id="ffi">
+                <span class="name"><a href="ffi/ffi-library.html">ffi</a></span>
+              </dt>
+              <dd>
+                <p>Higher level access to the FFI library.</p>
+              </dd>
+          </dl>
+        </section>
+        <section class="summary">
+          <h2>file</h2>
+          <dl>
+              <dt id="file">
+                <span class="name"><a href="file/file-library.html">file</a></span>
+              </dt>
+              <dd>
+                <p>File access APIs. Only supported when Dartino is running on a Posix platform.</p>
+              </dd>
+          </dl>
+        </section>
+        <section class="summary">
+          <h2>gpio</h2>
+          <dl>
+              <dt id="gpio">
+                <span class="name"><a href="gpio/gpio-library.html">gpio</a></span>
+              </dt>
+              <dd>
+                <p>GPIO support providing access to controlling GPIO pins.</p>
+              </dd>
+              <dt id="gpio_mock">
+                <span class="name"><a href="gpio_mock/gpio_mock-library.html">gpio_mock</a></span>
+              </dt>
+              <dd>
+                <p>Mock implementation of the GPIO interface.</p>
+              </dd>
+          </dl>
+        </section>
+        <section class="summary">
+          <h2>http</h2>
+          <dl>
+              <dt id="http">
+                <span class="name"><a href="http/http-library.html">http</a></span>
+              </dt>
+              <dd>
+                <p>HTTP client implementation.</p>
+              </dd>
+          </dl>
+        </section>
+        <section class="summary">
+          <h2>i2c</h2>
+          <dl>
+              <dt id="hts221">
+                <span class="name"><a href="hts221/hts221-library.html">hts221</a></span>
+              </dt>
+              <dd>
+                <p>API for HTS221 "capacitive digital sensor for relative humidity and
+temperature" chip using the I2C bus.</p>
+              </dd>
+              <dt id="i2c">
+                <span class="name"><a href="i2c/i2c-library.html">i2c</a></span>
+              </dt>
+              <dd>
+                <p>I2C support for Linux.</p>
+              </dd>
+              <dt id="lis3mdl">
+                <span class="name"><a href="lis3mdl/lis3mdl-library.html">lis3mdl</a></span>
+              </dt>
+              <dd>
+                <p>API for LIS3MDL "Digital output magnetic sensor: ultra-low-power,
+high-performance 3-axis magnetometer" chip using the I2C bus.</p>
+              </dd>
+              <dt id="lps25h">
+                <span class="name"><a href="lps25h/lps25h-library.html">lps25h</a></span>
+              </dt>
+              <dd>
+                <p>API for LPS25H and LPS25HB "MEMS pressure sensor: 260-1260 hPa
+absolute digital output barometer" chip using the I2C bus.</p>
+              </dd>
+              <dt id="lsm6ds0">
+                <span class="name"><a href="lsm6ds0/lsm6ds0-library.html">lsm6ds0</a></span>
+              </dt>
+              <dd>
+                <p>API for LSM6DS0 "iNEMO inertial module: 3D accelerometer and 3D gyroscope"
+chip using the I2C bus.</p>
+              </dd>
+              <dt id="lsm9ds1">
+                <span class="name"><a href="lsm9ds1/lsm9ds1-library.html">lsm9ds1</a></span>
+              </dt>
+              <dd>
+                <p>API for LSM9DS1 "iNEMO inertial module: 3D accelerometer, 3D gyroscope,
+3D magnetometer" chip using the I2C bus.</p>
+              </dd>
+          </dl>
+        </section>
+        <section class="summary">
+          <h2>mbedtls</h2>
+          <dl>
+              <dt id="mbedtls">
+                <span class="name"><a href="mbedtls/mbedtls-library.html">mbedtls</a></span>
+              </dt>
+              <dd>
+                <p>TLS support, based on mbedtls. This can be used in the same way as a normal
+Socket (and passed to the http package).</p>
+              </dd>
+          </dl>
+        </section>
+        <section class="summary">
+          <h2>mqtt</h2>
+          <dl>
+              <dt id="mqtt">
+                <span class="name"><a href="mqtt/mqtt-library.html">mqtt</a></span>
+              </dt>
+              <dd>
+                <p>MQTT client library for the <a href="http://mqtt.org/">MQTT protocol</a>, a lightweight
+IoT pub/sub messaging protocol.</p>
+              </dd>
+          </dl>
+        </section>
+        <section class="summary">
+          <h2>nucleo_iks01a1</h2>
+          <dl>
+              <dt id="nucleo_iks01a1">
+                <span class="name"><a href="nucleo_iks01a1/nucleo_iks01a1-library.html">nucleo_iks01a1</a></span>
+              </dt>
+              <dd>
+                <p>Support library for accessing the sensors on a X-NUCLEO-IKS01A1
+expansion board.</p>
+              </dd>
+          </dl>
+        </section>
+        <section class="summary">
+          <h2>os</h2>
+          <dl>
+              <dt id="os">
+                <span class="name"><a href="os/os-library.html">os</a></span>
+              </dt>
+              <dd>
+                <p>Access to the operating system. Only supported when Dartino is running on a
+Posix platform.</p>
+              </dd>
+          </dl>
+        </section>
+        <section class="summary">
+          <h2>raspberry_pi</h2>
+          <dl>
+              <dt id="raspberry_pi">
+                <span class="name"><a href="raspberry_pi/raspberry_pi-library.html">raspberry_pi</a></span>
+              </dt>
+              <dd>
+                <p>Access to Raspberry Pi 2 specific hardware features such as onboard LEDs.
+Also provides an API to the Sense HAT shield.</p>
+              </dd>
+              <dt id="raspberry_pi.sense_hat">
+                <span class="name"><a href="raspberry_pi.sense_hat/raspberry_pi.sense_hat-library.html">raspberry_pi.sense_hat</a></span>
+              </dt>
+              <dd>
+                <p>API for accessing the devices on the Raspberry Pi Sense HAT add-on board.
+See: https://www.raspberrypi.org/products/sense-hat/.</p>
+              </dd>
+          </dl>
+        </section>
+        <section class="summary">
+          <h2>socket</h2>
+          <dl>
+              <dt id="socket">
+                <span class="name"><a href="socket/socket-library.html">socket</a></span>
+              </dt>
+              <dd>
+                <p>Dartino implementation of TCP and UDP sockets.</p>
+              </dd>
+          </dl>
+        </section>
+        <section class="summary">
+          <h2>stm32</h2>
+          <dl>
+              <dt id="stm32">
+                <span class="name"><a href="stm32/stm32-library.html">stm32</a></span>
+              </dt>
+              <dd>
+                <p>Support for STM32 boards.
+Currently there is explicit support for the following boards:</p>
+              </dd>
+              <dt id="stm32.adc">
+                <span class="name"><a href="stm32.adc/stm32.adc-library.html">stm32.adc</a></span>
+              </dt>
+              <dd>
+                
+              </dd>
+              <dt id="stm32.button">
+                <span class="name"><a href="stm32.button/stm32.button-library.html">stm32.button</a></span>
+              </dt>
+              <dd>
+                
+              </dd>
+              <dt id="stm32.ethernet">
+                <span class="name"><a href="stm32.ethernet/stm32.ethernet-library.html">stm32.ethernet</a></span>
+              </dt>
+              <dd>
+                
+              </dd>
+              <dt id="stm32.gpio">
+                <span class="name"><a href="stm32.gpio/stm32.gpio-library.html">stm32.gpio</a></span>
+              </dt>
+              <dd>
+                
+              </dd>
+              <dt id="stm32.i2c">
+                <span class="name"><a href="stm32.i2c/stm32.i2c-library.html">stm32.i2c</a></span>
+              </dt>
+              <dd>
+                
+              </dd>
+              <dt id="stm32.lcd">
+                <span class="name"><a href="stm32.lcd/stm32.lcd-library.html">stm32.lcd</a></span>
+              </dt>
+              <dd>
+                
+              </dd>
+              <dt id="stm32.socket">
+                <span class="name"><a href="stm32.socket/stm32.socket-library.html">stm32.socket</a></span>
+              </dt>
+              <dd>
+                
+              </dd>
+              <dt id="stm32.stm32f411re_nucleo">
+                <span class="name"><a href="stm32.stm32f411re_nucleo/stm32.stm32f411re_nucleo-library.html">stm32.stm32f411re_nucleo</a></span>
+              </dt>
+              <dd>
+                
+              </dd>
+              <dt id="stm32.stm32f746g_discovery">
+                <span class="name"><a href="stm32.stm32f746g_discovery/stm32.stm32f746g_discovery-library.html">stm32.stm32f746g_discovery</a></span>
+              </dt>
+              <dd>
+                
+              </dd>
+              <dt id="stm32.ts">
+                <span class="name"><a href="stm32.ts/stm32.ts-library.html">stm32.ts</a></span>
+              </dt>
+              <dd>
+                
+              </dd>
+              <dt id="stm32.uart">
+                <span class="name"><a href="stm32.uart/stm32.uart-library.html">stm32.uart</a></span>
+              </dt>
+              <dd>
+                
+              </dd>
+          </dl>
+        </section>
 
-      
-      </section>
 
-    <section class="summary" id="libraries">
-      <h2>Libraries</h2>
-      <dl>
-          <dt id="dartino">
-            <span class="name"><a class="" href="dartino/dartino-library.html">dartino</a></span>
-          </dt>
-          <dd>
-            
-            <p>
-              Dartino utility package.
-              <a href="dartino/dartino-library.html">&hellip;</a>
-                          </p>
-          </dd>
-          <dt id="ffi">
-            <span class="name"><a class="" href="ffi/ffi-library.html">ffi</a></span>
-          </dt>
-          <dd>
-            
-            <p>
-              Higher level access to the FFI library.
-              <a href="ffi/ffi-library.html">&hellip;</a>
-                          </p>
-          </dd>
-          <dt id="file">
-            <span class="name"><a class="" href="file/file-library.html">file</a></span>
-          </dt>
-          <dd>
-            
-            <p>
-              File access APIs. Only supported when Dartino is running on a Posix platform.
-              <a href="file/file-library.html">&hellip;</a>
-                          </p>
-          </dd>
-          <dt id="gpio">
-            <span class="name"><a class="" href="gpio/gpio-library.html">gpio</a></span>
-          </dt>
-          <dd>
-            
-            <p>
-              GPIO support providing access to controlling GPIO pins.
-              <a href="gpio/gpio-library.html">&hellip;</a>
-                          </p>
-          </dd>
-          <dt id="http">
-            <span class="name"><a class="" href="http/http-library.html">http</a></span>
-          </dt>
-          <dd>
-            
-            <p>
-              HTTP client. Only supported when Dartino is running on a Posix platform.
-                          </p>
-          </dd>
-          <dt id="i2c">
-            <span class="name"><a class="" href="i2c/i2c-library.html">i2c</a></span>
-          </dt>
-          <dd>
-            
-            <p>
-              I2C support for Linux.
-              <a href="i2c/i2c-library.html">&hellip;</a>
-                          </p>
-          </dd>
-          <dt id="mbedtls">
-            <span class="name"><a class="" href="mbedtls/mbedtls-library.html">mbedtls</a></span>
-          </dt>
-          <dd>
-            
-            <p>
-              TLS support, based on mbedtls. This can be used in the same way as a normal
-Socket (and passed to the http package).
-              <a href="mbedtls/mbedtls-library.html">&hellip;</a>
-                          </p>
-          </dd>
-          <dt id="mqtt">
-            <span class="name"><a class="" href="mqtt/mqtt-library.html">mqtt</a></span>
-          </dt>
-          <dd>
-            
-            <p>
-              MQTT client library for the <a href="http://mqtt.org/">MQTT protocol</a>, a lightweight
-IoT pub/sub messaging protocol.
-              <a href="mqtt/mqtt-library.html">&hellip;</a>
-                          </p>
-          </dd>
-          <dt id="os">
-            <span class="name"><a class="" href="os/os-library.html">os</a></span>
-          </dt>
-          <dd>
-            
-            <p>
-              Access to the operating system. Only supported when Dartino is running on a
-Posix platform.
-              <a href="os/os-library.html">&hellip;</a>
-                          </p>
-          </dd>
-          <dt id="raspberry_pi">
-            <span class="name"><a class="" href="raspberry_pi/raspberry_pi-library.html">raspberry_pi</a></span>
-          </dt>
-          <dd>
-            
-            <p>
-              Access to Raspberry Pi 2 specific hardware features such as onboard LEDs.
-Also provides an API to the Sense HAT shield.
-              <a href="raspberry_pi/raspberry_pi-library.html">&hellip;</a>
-                          </p>
-          </dd>
-          <dt id="socket">
-            <span class="name"><a class="" href="socket/socket-library.html">socket</a></span>
-          </dt>
-          <dd>
-            
-            <p>
-              Socket access. Only supported when Dartino is running on a Posix platform.
-              <a href="socket/socket-library.html">&hellip;</a>
-                          </p>
-          </dd>
-          <dt id="stm32">
-            <span class="name"><a class="" href="stm32/stm32-library.html">stm32</a></span>
-          </dt>
-          <dd>
-            
-            <p>
-              Support for STM32 boards.
-Currently there is explicit support for the following boards:
-              <a href="stm32/stm32-library.html">&hellip;</a>
-                          </p>
-          </dd>
-      </dl>
-    </section>
 
   </div> <!-- /.main-content -->
 
@@ -239,39 +479,39 @@ Currently there is explicit support for the following boards:
 
   </div><!--/.sidebar-offcanvas-right-->
 
-  </div> <!-- row -->
+</div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
-    <div class="container-fluid">
-        <div class="container">
-            <p class="text-center">
-                <span class="no-break">
-                  Dartino SDK 
-                </span>
-                &bull;
-                <span class="no-break">
-                  <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
-                  </a>
-                </span>
-                &bull;
-                <span class="copyright no-break">
-                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
-                </span>
-            </p>
-        </div>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          Dartino libraries 0.5.0-dev.1.5
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
     </div>
+  </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.4 -->
 </body>
 
 </html>

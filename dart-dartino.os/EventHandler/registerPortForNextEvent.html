@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="API docs for the registerPortForNextEvent method from the EventHandler class, for the Dart programming language.">
+  <title>registerPortForNextEvent method - EventHandler class - dart:dartino.os library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../..">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">Dartino libraries</a></li>
+            <li><a href="dart-dartino.os/dart-dartino.os-library.html">dart:dartino.os</a></li>
+            <li><a href="dart-dartino.os/EventHandler-class.html">EventHandler</a></li>
+            <li class="self-crumb">registerPortForNextEvent</li>
+          </ol>
+          <div class="self-name">registerPortForNextEvent</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">Dartino libraries</a></li>
+          <li><a href="dart-dartino.os/dart-dartino.os-library.html">dart:dartino.os</a></li>
+          <li><a href="dart-dartino.os/EventHandler-class.html">EventHandler</a></li>
+          <li class="self-crumb">registerPortForNextEvent</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">method</span> registerPortForNextEvent
+          </h1>
+        </div>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">Dartino libraries</a></h5>
+    <h5><a href="dart-dartino.os/dart-dartino.os-library.html">dart:dartino.os</a></h5>
+    <h5><a href="dart-dartino.os/EventHandler-class.html">EventHandler</a></h5>
+
+    <ol>
+    
+    
+    
+    
+      <li class="section-title inherited">
+        <a href="dart-dartino.os/EventHandler-class.html#instance-properties">Properties</a>
+      </li>
+      <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+    
+      <li class="section-title inherited"><a href="dart-dartino.os/EventHandler-class.html#operators">Operators</a></li>
+      <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+    
+      <li class="section-title"><a href="dart-dartino.os/EventHandler-class.html#instance-methods">Methods</a></li>
+      <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="dart-dartino.os/EventHandler/registerPortForNextEvent.html">registerPortForNextEvent</a></li>
+      <li class="inherited"><a href="dart-core/Object/toString.html">toString</a></li>
+    </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <section class="multi-line-signature">
+      <span class="returntype">void</span>
+      <span class="name ">registerPortForNextEvent</span>(<wbr><span class="parameter" id="registerPortForNextEvent-param-id"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">id</span></span>, <span class="parameter" id="registerPortForNextEvent-param-port"><span class="type-annotation"><a href="dart-dartino/Port-class.html">Port</a></span> <span class="parameter-name">port</span></span>, <span class="parameter" id="registerPortForNextEvent-param-mask"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">mask</span></span>)
+    </section>
+    <section class="desc markdown">
+      <p>Register the port <code>port</code> to be notified when the event source <code>id</code> is
+triggered the next time. <code>event_kinds</code> specifies a bit-mask to select
+the kinds of events that should trigger a notification.</p>
+<p>Registration is one-shot, i.e., after <code>port</code> has been notified, it has
+to be registered again to receive further notifications.
+Registration is single-subscriber, i.e., only one <code>port</code> object may be
+registered for an event source at any given point.</p>
+<p>Currently supported event kinds are <a href="dart-dartino.os/READ_EVENT-constant.html">READ_EVENT</a>, <a href="dart-dartino.os/WRITE_EVENT-constant.html">WRITE_EVENT</a>,
+<a href="dart-dartino.os/CLOSE_EVENT-constant.html">CLOSE_EVENT</a> and <a href="dart-dartino.os/ERROR_EVENT-constant.html">ERROR_EVENT</a>;</p>
+<p>The supported types of event sources is platform dependent.
+The supported types of event kinds is event source dependent.</p>
+<p>An <a href="dart-core/ArgumentError-class.html">ArgumentError</a> is thrown if the event source is not supported.
+A <a href="dart-core/StateError-class.html">StateError</a> is thrown if the port could not be registered.</p>
+    </section>
+    
+    
+
+  </div> <!-- /.main-content -->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          Dartino libraries 0.5.0-dev.1.5
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+</body>
+
+</html>

@@ -1,0 +1,2020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="API docs for the STM32Pin class from the stm32.gpio library, for the Dart programming language.">
+  <title>STM32Pin class - stm32.gpio library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">Dartino libraries</a></li>
+            <li><a href="stm32.gpio/stm32.gpio-library.html">stm32.gpio</a></li>
+            <li class="self-crumb">STM32Pin</li>
+          </ol>
+          <div class="self-name">STM32Pin</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">Dartino libraries</a></li>
+          <li><a href="stm32.gpio/stm32.gpio-library.html">stm32.gpio</a></li>
+          <li class="self-crumb">STM32Pin</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">class</span> STM32Pin
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="stm32.gpio/STM32Pin-class.html#constants">Constants</a></li>
+          <li><a href="stm32.gpio/STM32Pin-class.html#instance-properties">Properties</a></li>
+          <li><a href="stm32.gpio/STM32Pin-class.html#constructors">Constructors</a></li>
+          <li><a href="stm32.gpio/STM32Pin-class.html#operators">Operators</a></li>
+          <li><a href="stm32.gpio/STM32Pin-class.html#instance-methods">Methods</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">Dartino libraries</a></h5>
+    <h5><a href="stm32.gpio/stm32.gpio-library.html">stm32.gpio</a></h5>
+
+    <ol>
+    
+    
+    
+    
+    
+      <li class="section-title"><a href="stm32.gpio/stm32.gpio-library.html#classes">Classes</a></li>
+      <li><a href="stm32.gpio/STM32Gpio-class.html">STM32Gpio</a></li>
+      <li><a href="stm32.gpio/STM32Pin-class.html">STM32Pin</a></li>
+    
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="desc markdown">
+      <p>All the GPIO pins on the STM32 MCUs. Not all models have all pins.</p>
+    </section>
+    
+
+    <section class="summary offset-anchor" id="constants">
+      <h2>Constants</h2>
+
+      <dl class="properties">
+        <dt id="PA0" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PA0-constant.html">PA0</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PA0', _STM32GpioPort.A, 0)</code></span>
+          </div>
+        </dd>
+        <dt id="PA1" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PA1-constant.html">PA1</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PA1', _STM32GpioPort.A, 1)</code></span>
+          </div>
+        </dd>
+        <dt id="PA2" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PA2-constant.html">PA2</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PA2', _STM32GpioPort.A, 2)</code></span>
+          </div>
+        </dd>
+        <dt id="PA3" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PA3-constant.html">PA3</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PA3', _STM32GpioPort.A, 3)</code></span>
+          </div>
+        </dd>
+        <dt id="PA4" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PA4-constant.html">PA4</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PA4', _STM32GpioPort.A, 4)</code></span>
+          </div>
+        </dd>
+        <dt id="PA5" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PA5-constant.html">PA5</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PA5', _STM32GpioPort.A, 5)</code></span>
+          </div>
+        </dd>
+        <dt id="PA6" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PA6-constant.html">PA6</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PA6', _STM32GpioPort.A, 6)</code></span>
+          </div>
+        </dd>
+        <dt id="PA7" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PA7-constant.html">PA7</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PA7', _STM32GpioPort.A, 7)</code></span>
+          </div>
+        </dd>
+        <dt id="PA8" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PA8-constant.html">PA8</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PA8', _STM32GpioPort.A, 8)</code></span>
+          </div>
+        </dd>
+        <dt id="PA9" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PA9-constant.html">PA9</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PA9', _STM32GpioPort.A, 9)</code></span>
+          </div>
+        </dd>
+        <dt id="PA10" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PA10-constant.html">PA10</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PA10', _STM32GpioPort.A, 10)</code></span>
+          </div>
+        </dd>
+        <dt id="PA11" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PA11-constant.html">PA11</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PA11', _STM32GpioPort.A, 11)</code></span>
+          </div>
+        </dd>
+        <dt id="PA12" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PA12-constant.html">PA12</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PA12', _STM32GpioPort.A, 12)</code></span>
+          </div>
+        </dd>
+        <dt id="PA13" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PA13-constant.html">PA13</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PA13', _STM32GpioPort.A, 13)</code></span>
+          </div>
+        </dd>
+        <dt id="PA14" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PA14-constant.html">PA14</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PA14', _STM32GpioPort.A, 14)</code></span>
+          </div>
+        </dd>
+        <dt id="PA15" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PA15-constant.html">PA15</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PA15', _STM32GpioPort.A, 15)</code></span>
+          </div>
+        </dd>
+        <dt id="PB0" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PB0-constant.html">PB0</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PB0', _STM32GpioPort.B, 0)</code></span>
+          </div>
+        </dd>
+        <dt id="PB1" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PB1-constant.html">PB1</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PB1', _STM32GpioPort.B, 1)</code></span>
+          </div>
+        </dd>
+        <dt id="PB2" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PB2-constant.html">PB2</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PB2', _STM32GpioPort.B, 2)</code></span>
+          </div>
+        </dd>
+        <dt id="PB3" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PB3-constant.html">PB3</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PB3', _STM32GpioPort.B, 3)</code></span>
+          </div>
+        </dd>
+        <dt id="PB4" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PB4-constant.html">PB4</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PB4', _STM32GpioPort.B, 4)</code></span>
+          </div>
+        </dd>
+        <dt id="PB5" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PB5-constant.html">PB5</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PB5', _STM32GpioPort.B, 5)</code></span>
+          </div>
+        </dd>
+        <dt id="PB6" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PB6-constant.html">PB6</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PB6', _STM32GpioPort.B, 6)</code></span>
+          </div>
+        </dd>
+        <dt id="PB7" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PB7-constant.html">PB7</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PB7', _STM32GpioPort.B, 7)</code></span>
+          </div>
+        </dd>
+        <dt id="PB8" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PB8-constant.html">PB8</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PB8', _STM32GpioPort.B, 8)</code></span>
+          </div>
+        </dd>
+        <dt id="PB9" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PB9-constant.html">PB9</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PB9', _STM32GpioPort.B, 9)</code></span>
+          </div>
+        </dd>
+        <dt id="PB10" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PB10-constant.html">PB10</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PB10', _STM32GpioPort.B, 10)</code></span>
+          </div>
+        </dd>
+        <dt id="PB11" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PB11-constant.html">PB11</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PB11', _STM32GpioPort.B, 11)</code></span>
+          </div>
+        </dd>
+        <dt id="PB12" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PB12-constant.html">PB12</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PB12', _STM32GpioPort.B, 12)</code></span>
+          </div>
+        </dd>
+        <dt id="PB13" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PB13-constant.html">PB13</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PB13', _STM32GpioPort.B, 13)</code></span>
+          </div>
+        </dd>
+        <dt id="PB14" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PB14-constant.html">PB14</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PB14', _STM32GpioPort.B, 14)</code></span>
+          </div>
+        </dd>
+        <dt id="PB15" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PB15-constant.html">PB15</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PB15', _STM32GpioPort.B, 15)</code></span>
+          </div>
+        </dd>
+        <dt id="PC0" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PC0-constant.html">PC0</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PC0', _STM32GpioPort.C, 0)</code></span>
+          </div>
+        </dd>
+        <dt id="PC1" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PC1-constant.html">PC1</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PC1', _STM32GpioPort.C, 1)</code></span>
+          </div>
+        </dd>
+        <dt id="PC2" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PC2-constant.html">PC2</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PC2', _STM32GpioPort.C, 2)</code></span>
+          </div>
+        </dd>
+        <dt id="PC3" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PC3-constant.html">PC3</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PC3', _STM32GpioPort.C, 3)</code></span>
+          </div>
+        </dd>
+        <dt id="PC4" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PC4-constant.html">PC4</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PC4', _STM32GpioPort.C, 4)</code></span>
+          </div>
+        </dd>
+        <dt id="PC5" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PC5-constant.html">PC5</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PC5', _STM32GpioPort.C, 5)</code></span>
+          </div>
+        </dd>
+        <dt id="PC6" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PC6-constant.html">PC6</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PC6', _STM32GpioPort.C, 6)</code></span>
+          </div>
+        </dd>
+        <dt id="PC7" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PC7-constant.html">PC7</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PC7', _STM32GpioPort.C, 7)</code></span>
+          </div>
+        </dd>
+        <dt id="PC8" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PC8-constant.html">PC8</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PC8', _STM32GpioPort.C, 8)</code></span>
+          </div>
+        </dd>
+        <dt id="PC9" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PC9-constant.html">PC9</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PC9', _STM32GpioPort.C, 9)</code></span>
+          </div>
+        </dd>
+        <dt id="PC10" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PC10-constant.html">PC10</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PC10', _STM32GpioPort.C, 10)</code></span>
+          </div>
+        </dd>
+        <dt id="PC11" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PC11-constant.html">PC11</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PC11', _STM32GpioPort.C, 11)</code></span>
+          </div>
+        </dd>
+        <dt id="PC12" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PC12-constant.html">PC12</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PC12', _STM32GpioPort.C, 12)</code></span>
+          </div>
+        </dd>
+        <dt id="PC13" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PC13-constant.html">PC13</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PC13', _STM32GpioPort.C, 13)</code></span>
+          </div>
+        </dd>
+        <dt id="PC14" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PC14-constant.html">PC14</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PC14', _STM32GpioPort.C, 14)</code></span>
+          </div>
+        </dd>
+        <dt id="PC15" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PC15-constant.html">PC15</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PC15', _STM32GpioPort.C, 15)</code></span>
+          </div>
+        </dd>
+        <dt id="PD0" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PD0-constant.html">PD0</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PD0', _STM32GpioPort.D, 0)</code></span>
+          </div>
+        </dd>
+        <dt id="PD1" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PD1-constant.html">PD1</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PD1', _STM32GpioPort.D, 1)</code></span>
+          </div>
+        </dd>
+        <dt id="PD2" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PD2-constant.html">PD2</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PD2', _STM32GpioPort.D, 2)</code></span>
+          </div>
+        </dd>
+        <dt id="PD3" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PD3-constant.html">PD3</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PD3', _STM32GpioPort.D, 3)</code></span>
+          </div>
+        </dd>
+        <dt id="PD4" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PD4-constant.html">PD4</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PD4', _STM32GpioPort.D, 4)</code></span>
+          </div>
+        </dd>
+        <dt id="PD5" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PD5-constant.html">PD5</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PD5', _STM32GpioPort.D, 5)</code></span>
+          </div>
+        </dd>
+        <dt id="PD6" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PD6-constant.html">PD6</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PD6', _STM32GpioPort.D, 6)</code></span>
+          </div>
+        </dd>
+        <dt id="PD7" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PD7-constant.html">PD7</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PD7', _STM32GpioPort.D, 7)</code></span>
+          </div>
+        </dd>
+        <dt id="PD8" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PD8-constant.html">PD8</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PD8', _STM32GpioPort.D, 8)</code></span>
+          </div>
+        </dd>
+        <dt id="PD9" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PD9-constant.html">PD9</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PD9', _STM32GpioPort.D, 9)</code></span>
+          </div>
+        </dd>
+        <dt id="PD10" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PD10-constant.html">PD10</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PD10', _STM32GpioPort.D, 10)</code></span>
+          </div>
+        </dd>
+        <dt id="PD11" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PD11-constant.html">PD11</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PD11', _STM32GpioPort.D, 11)</code></span>
+          </div>
+        </dd>
+        <dt id="PD12" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PD12-constant.html">PD12</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PD12', _STM32GpioPort.D, 12)</code></span>
+          </div>
+        </dd>
+        <dt id="PD13" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PD13-constant.html">PD13</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PD13', _STM32GpioPort.D, 13)</code></span>
+          </div>
+        </dd>
+        <dt id="PD14" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PD14-constant.html">PD14</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PD14', _STM32GpioPort.D, 14)</code></span>
+          </div>
+        </dd>
+        <dt id="PD15" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PD15-constant.html">PD15</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PD15', _STM32GpioPort.D, 15)</code></span>
+          </div>
+        </dd>
+        <dt id="PE0" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PE0-constant.html">PE0</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PE0', _STM32GpioPort.E, 0)</code></span>
+          </div>
+        </dd>
+        <dt id="PE1" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PE1-constant.html">PE1</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PE1', _STM32GpioPort.E, 1)</code></span>
+          </div>
+        </dd>
+        <dt id="PE2" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PE2-constant.html">PE2</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PE2', _STM32GpioPort.E, 2)</code></span>
+          </div>
+        </dd>
+        <dt id="PE3" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PE3-constant.html">PE3</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PE3', _STM32GpioPort.E, 3)</code></span>
+          </div>
+        </dd>
+        <dt id="PE4" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PE4-constant.html">PE4</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PE4', _STM32GpioPort.E, 4)</code></span>
+          </div>
+        </dd>
+        <dt id="PE5" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PE5-constant.html">PE5</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PE5', _STM32GpioPort.E, 5)</code></span>
+          </div>
+        </dd>
+        <dt id="PE6" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PE6-constant.html">PE6</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PE6', _STM32GpioPort.E, 6)</code></span>
+          </div>
+        </dd>
+        <dt id="PE7" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PE7-constant.html">PE7</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PE7', _STM32GpioPort.E, 7)</code></span>
+          </div>
+        </dd>
+        <dt id="PE8" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PE8-constant.html">PE8</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PE8', _STM32GpioPort.E, 8)</code></span>
+          </div>
+        </dd>
+        <dt id="PE9" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PE9-constant.html">PE9</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PE9', _STM32GpioPort.E, 9)</code></span>
+          </div>
+        </dd>
+        <dt id="PE10" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PE10-constant.html">PE10</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PE10', _STM32GpioPort.E, 10)</code></span>
+          </div>
+        </dd>
+        <dt id="PE11" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PE11-constant.html">PE11</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PE11', _STM32GpioPort.E, 11)</code></span>
+          </div>
+        </dd>
+        <dt id="PE12" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PE12-constant.html">PE12</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PE12', _STM32GpioPort.E, 12)</code></span>
+          </div>
+        </dd>
+        <dt id="PE13" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PE13-constant.html">PE13</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PE13', _STM32GpioPort.E, 13)</code></span>
+          </div>
+        </dd>
+        <dt id="PE14" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PE14-constant.html">PE14</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PE14', _STM32GpioPort.E, 14)</code></span>
+          </div>
+        </dd>
+        <dt id="PE15" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PE15-constant.html">PE15</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PE15', _STM32GpioPort.E, 15)</code></span>
+          </div>
+        </dd>
+        <dt id="PF1" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PF1-constant.html">PF1</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PF1', _STM32GpioPort.F, 1)</code></span>
+          </div>
+        </dd>
+        <dt id="PF2" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PF2-constant.html">PF2</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PF2', _STM32GpioPort.F, 2)</code></span>
+          </div>
+        </dd>
+        <dt id="PF3" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PF3-constant.html">PF3</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PF3', _STM32GpioPort.F, 3)</code></span>
+          </div>
+        </dd>
+        <dt id="PF4" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PF4-constant.html">PF4</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PF4', _STM32GpioPort.F, 4)</code></span>
+          </div>
+        </dd>
+        <dt id="PF5" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PF5-constant.html">PF5</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PF5', _STM32GpioPort.F, 5)</code></span>
+          </div>
+        </dd>
+        <dt id="PF6" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PF6-constant.html">PF6</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PF6', _STM32GpioPort.F, 6)</code></span>
+          </div>
+        </dd>
+        <dt id="PF7" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PF7-constant.html">PF7</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PF7', _STM32GpioPort.F, 7)</code></span>
+          </div>
+        </dd>
+        <dt id="PF8" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PF8-constant.html">PF8</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PF8', _STM32GpioPort.F, 8)</code></span>
+          </div>
+        </dd>
+        <dt id="PF9" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PF9-constant.html">PF9</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PF9', _STM32GpioPort.F, 9)</code></span>
+          </div>
+        </dd>
+        <dt id="PF10" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PF10-constant.html">PF10</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PF10', _STM32GpioPort.F, 10)</code></span>
+          </div>
+        </dd>
+        <dt id="PF11" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PF11-constant.html">PF11</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PF11', _STM32GpioPort.F, 11)</code></span>
+          </div>
+        </dd>
+        <dt id="PF12" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PF12-constant.html">PF12</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PF12', _STM32GpioPort.F, 12)</code></span>
+          </div>
+        </dd>
+        <dt id="PF13" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PF13-constant.html">PF13</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PF13', _STM32GpioPort.F, 13)</code></span>
+          </div>
+        </dd>
+        <dt id="PF14" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PF14-constant.html">PF14</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PF14', _STM32GpioPort.F, 14)</code></span>
+          </div>
+        </dd>
+        <dt id="PF15" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PF15-constant.html">PF15</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PF15', _STM32GpioPort.F, 15)</code></span>
+          </div>
+        </dd>
+        <dt id="PG0" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PG0-constant.html">PG0</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PG0', _STM32GpioPort.G, 0)</code></span>
+          </div>
+        </dd>
+        <dt id="PG1" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PG1-constant.html">PG1</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PG1', _STM32GpioPort.G, 1)</code></span>
+          </div>
+        </dd>
+        <dt id="PG2" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PG2-constant.html">PG2</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PG2', _STM32GpioPort.G, 2)</code></span>
+          </div>
+        </dd>
+        <dt id="PG3" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PG3-constant.html">PG3</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PG3', _STM32GpioPort.G, 3)</code></span>
+          </div>
+        </dd>
+        <dt id="PG4" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PG4-constant.html">PG4</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PG4', _STM32GpioPort.G, 4)</code></span>
+          </div>
+        </dd>
+        <dt id="PG5" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PG5-constant.html">PG5</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PG5', _STM32GpioPort.G, 5)</code></span>
+          </div>
+        </dd>
+        <dt id="PG6" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PG6-constant.html">PG6</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PG6', _STM32GpioPort.G, 6)</code></span>
+          </div>
+        </dd>
+        <dt id="PG7" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PG7-constant.html">PG7</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PG7', _STM32GpioPort.G, 7)</code></span>
+          </div>
+        </dd>
+        <dt id="PG8" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PG8-constant.html">PG8</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PG8', _STM32GpioPort.G, 8)</code></span>
+          </div>
+        </dd>
+        <dt id="PG9" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PG9-constant.html">PG9</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PG9', _STM32GpioPort.G, 9)</code></span>
+          </div>
+        </dd>
+        <dt id="PG10" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PG10-constant.html">PG10</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PG10', _STM32GpioPort.G, 10)</code></span>
+          </div>
+        </dd>
+        <dt id="PG11" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PG11-constant.html">PG11</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PG11', _STM32GpioPort.G, 11)</code></span>
+          </div>
+        </dd>
+        <dt id="PG12" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PG12-constant.html">PG12</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PG12', _STM32GpioPort.G, 12)</code></span>
+          </div>
+        </dd>
+        <dt id="PG13" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PG13-constant.html">PG13</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PG13', _STM32GpioPort.G, 13)</code></span>
+          </div>
+        </dd>
+        <dt id="PG14" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PG14-constant.html">PG14</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PG14', _STM32GpioPort.G, 14)</code></span>
+          </div>
+        </dd>
+        <dt id="PG15" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PG15-constant.html">PG15</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PG15', _STM32GpioPort.G, 15)</code></span>
+          </div>
+        </dd>
+        <dt id="PH0" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PH0-constant.html">PH0</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PH0', _STM32GpioPort.H, 0)</code></span>
+          </div>
+        </dd>
+        <dt id="PH1" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PH1-constant.html">PH1</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PH1', _STM32GpioPort.H, 1)</code></span>
+          </div>
+        </dd>
+        <dt id="PH2" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PH2-constant.html">PH2</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PH2', _STM32GpioPort.H, 2)</code></span>
+          </div>
+        </dd>
+        <dt id="PH3" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PH3-constant.html">PH3</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PH3', _STM32GpioPort.H, 3)</code></span>
+          </div>
+        </dd>
+        <dt id="PH4" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PH4-constant.html">PH4</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PH4', _STM32GpioPort.H, 4)</code></span>
+          </div>
+        </dd>
+        <dt id="PH5" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PH5-constant.html">PH5</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PH5', _STM32GpioPort.H, 5)</code></span>
+          </div>
+        </dd>
+        <dt id="PH6" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PH6-constant.html">PH6</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PH6', _STM32GpioPort.H, 6)</code></span>
+          </div>
+        </dd>
+        <dt id="PH7" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PH7-constant.html">PH7</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PH7', _STM32GpioPort.H, 7)</code></span>
+          </div>
+        </dd>
+        <dt id="PH8" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PH8-constant.html">PH8</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PH8', _STM32GpioPort.H, 8)</code></span>
+          </div>
+        </dd>
+        <dt id="PH9" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PH9-constant.html">PH9</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PH9', _STM32GpioPort.H, 9)</code></span>
+          </div>
+        </dd>
+        <dt id="PH10" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PH10-constant.html">PH10</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PH10', _STM32GpioPort.H, 10)</code></span>
+          </div>
+        </dd>
+        <dt id="PH11" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PH11-constant.html">PH11</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PH11', _STM32GpioPort.H, 11)</code></span>
+          </div>
+        </dd>
+        <dt id="PH12" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PH12-constant.html">PH12</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PH12', _STM32GpioPort.H, 12)</code></span>
+          </div>
+        </dd>
+        <dt id="PH13" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PH13-constant.html">PH13</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PH13', _STM32GpioPort.H, 13)</code></span>
+          </div>
+        </dd>
+        <dt id="PH14" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PH14-constant.html">PH14</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PH14', _STM32GpioPort.H, 14)</code></span>
+          </div>
+        </dd>
+        <dt id="PH15" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PH15-constant.html">PH15</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PH15', _STM32GpioPort.H, 15)</code></span>
+          </div>
+        </dd>
+        <dt id="PI0" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PI0-constant.html">PI0</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PI0', _STM32GpioPort.I, 0)</code></span>
+          </div>
+        </dd>
+        <dt id="PI1" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PI1-constant.html">PI1</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PI1', _STM32GpioPort.I, 1)</code></span>
+          </div>
+        </dd>
+        <dt id="PI2" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PI2-constant.html">PI2</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PI2', _STM32GpioPort.I, 2)</code></span>
+          </div>
+        </dd>
+        <dt id="PI3" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PI3-constant.html">PI3</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PI3', _STM32GpioPort.I, 3)</code></span>
+          </div>
+        </dd>
+        <dt id="PI4" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PI4-constant.html">PI4</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PI4', _STM32GpioPort.I, 4)</code></span>
+          </div>
+        </dd>
+        <dt id="PI5" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PI5-constant.html">PI5</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PI5', _STM32GpioPort.I, 5)</code></span>
+          </div>
+        </dd>
+        <dt id="PI6" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PI6-constant.html">PI6</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PI6', _STM32GpioPort.I, 6)</code></span>
+          </div>
+        </dd>
+        <dt id="PI7" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PI7-constant.html">PI7</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PI7', _STM32GpioPort.I, 7)</code></span>
+          </div>
+        </dd>
+        <dt id="PI8" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PI8-constant.html">PI8</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PI8', _STM32GpioPort.I, 8)</code></span>
+          </div>
+        </dd>
+        <dt id="PI9" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PI9-constant.html">PI9</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PI9', _STM32GpioPort.I, 9)</code></span>
+          </div>
+        </dd>
+        <dt id="PI10" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PI10-constant.html">PI10</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PI10', _STM32GpioPort.I, 10)</code></span>
+          </div>
+        </dd>
+        <dt id="PI11" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PI11-constant.html">PI11</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PI11', _STM32GpioPort.I, 11)</code></span>
+          </div>
+        </dd>
+        <dt id="PI12" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PI12-constant.html">PI12</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PI12', _STM32GpioPort.I, 12)</code></span>
+          </div>
+        </dd>
+        <dt id="PI13" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PI13-constant.html">PI13</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PI13', _STM32GpioPort.I, 13)</code></span>
+          </div>
+        </dd>
+        <dt id="PI14" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PI14-constant.html">PI14</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PI14', _STM32GpioPort.I, 14)</code></span>
+          </div>
+        </dd>
+        <dt id="PI15" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PI15-constant.html">PI15</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PI15', _STM32GpioPort.I, 15)</code></span>
+          </div>
+        </dd>
+        <dt id="PJ0" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PJ0-constant.html">PJ0</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PJ0', _STM32GpioPort.J, 0)</code></span>
+          </div>
+        </dd>
+        <dt id="PJ1" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PJ1-constant.html">PJ1</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PJ1', _STM32GpioPort.J, 1)</code></span>
+          </div>
+        </dd>
+        <dt id="PJ2" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PJ2-constant.html">PJ2</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PJ2', _STM32GpioPort.J, 2)</code></span>
+          </div>
+        </dd>
+        <dt id="PJ3" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PJ3-constant.html">PJ3</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PJ3', _STM32GpioPort.J, 3)</code></span>
+          </div>
+        </dd>
+        <dt id="PJ4" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PJ4-constant.html">PJ4</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PJ4', _STM32GpioPort.J, 4)</code></span>
+          </div>
+        </dd>
+        <dt id="PJ5" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PJ5-constant.html">PJ5</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PJ5', _STM32GpioPort.J, 5)</code></span>
+          </div>
+        </dd>
+        <dt id="PJ6" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PJ6-constant.html">PJ6</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PJ6', _STM32GpioPort.J, 6)</code></span>
+          </div>
+        </dd>
+        <dt id="PJ7" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PJ7-constant.html">PJ7</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PJ7', _STM32GpioPort.J, 7)</code></span>
+          </div>
+        </dd>
+        <dt id="PJ8" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PJ8-constant.html">PJ8</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PJ8', _STM32GpioPort.J, 8)</code></span>
+          </div>
+        </dd>
+        <dt id="PJ9" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PJ9-constant.html">PJ9</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PJ9', _STM32GpioPort.J, 9)</code></span>
+          </div>
+        </dd>
+        <dt id="PJ10" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PJ10-constant.html">PJ10</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PJ10', _STM32GpioPort.J, 10)</code></span>
+          </div>
+        </dd>
+        <dt id="PJ11" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PJ11-constant.html">PJ11</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PJ11', _STM32GpioPort.J, 11)</code></span>
+          </div>
+        </dd>
+        <dt id="PJ12" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PJ12-constant.html">PJ12</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PJ12', _STM32GpioPort.J, 12)</code></span>
+          </div>
+        </dd>
+        <dt id="PJ13" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PJ13-constant.html">PJ13</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PJ13', _STM32GpioPort.J, 13)</code></span>
+          </div>
+        </dd>
+        <dt id="PJ14" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PJ14-constant.html">PJ14</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PJ14', _STM32GpioPort.J, 14)</code></span>
+          </div>
+        </dd>
+        <dt id="PJ15" class="constant">
+          <span class="name "><a href="stm32.gpio/STM32Pin/PJ15-constant.html">PJ15</a></span>
+          <span class="signature">&#8594; dynamic</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const STM32Pin('PJ15', _STM32GpioPort.J, 15)</code></span>
+          </div>
+        </dd>
+      </dl>
+    </section>
+
+
+
+    <section class="summary offset-anchor" id="constructors">
+      <h2>Constructors</h2>
+
+      <dl class="constructor-summary-list">
+        <dt id="STM32Pin" class="callable">
+          <span class="name"><a href="stm32.gpio/STM32Pin/STM32Pin.html">STM32Pin</a></span><span class="signature">(<span class="parameter" id="-param-name"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span></span>, <span class="parameter" id="-param-_port"><span class="type-annotation">_STM32GpioPort</span> <span class="parameter-name">_port</span></span>, <span class="parameter" id="-param-pin"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">pin</span></span>)</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="constructor-modifier features">const</div>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+          <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+          <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span>
+        </dt>
+        <dd class="inherited">
+          <p>Get a hash code for this object.</p>
+          <div class="features">
+    read-only, inherited
+  </div>
+</dd>
+        <dt id="name" class="property">
+          <span class="name"><a href="stm32.gpio/STM32Pin/name.html">name</a></span>
+          <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read-only
+  </div>
+</dd>
+        <dt id="pin" class="property">
+          <span class="name"><a href="stm32.gpio/STM32Pin/pin.html">pin</a></span>
+          <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read-only
+  </div>
+</dd>
+        <dt id="runtimeType" class="property inherited">
+          <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+          <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span>
+        </dt>
+        <dd class="inherited">
+          <p>A representation of the runtime type of the object.</p>
+          <div class="features">
+    read-only, inherited
+  </div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor inherited" id="operators">
+      <h2>Operators</h2>
+      <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+          <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+            <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>The equality operator.</p>
+          <div class="features">inherited</div>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-methods">
+      <h2>Methods</h2>
+      <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+          <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Invoked when a non-existent method or property is accessed.</p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="toString" class="callable">
+          <span class="name"><a href="stm32.gpio/STM32Pin/toString.html">toString</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+          </span>
+        </dt>
+        <dd>
+          <p>Returns a string representation of this object.</p>
+        </dd>
+      </dl>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <h5>STM32Pin</h5>
+    <ol>
+      <li class="section-title"><a href="stm32.gpio/STM32Pin-class.html#constants">Constants</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PA0-constant.html">PA0</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PA1-constant.html">PA1</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PA2-constant.html">PA2</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PA3-constant.html">PA3</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PA4-constant.html">PA4</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PA5-constant.html">PA5</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PA6-constant.html">PA6</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PA7-constant.html">PA7</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PA8-constant.html">PA8</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PA9-constant.html">PA9</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PA10-constant.html">PA10</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PA11-constant.html">PA11</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PA12-constant.html">PA12</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PA13-constant.html">PA13</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PA14-constant.html">PA14</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PA15-constant.html">PA15</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PB0-constant.html">PB0</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PB1-constant.html">PB1</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PB2-constant.html">PB2</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PB3-constant.html">PB3</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PB4-constant.html">PB4</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PB5-constant.html">PB5</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PB6-constant.html">PB6</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PB7-constant.html">PB7</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PB8-constant.html">PB8</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PB9-constant.html">PB9</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PB10-constant.html">PB10</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PB11-constant.html">PB11</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PB12-constant.html">PB12</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PB13-constant.html">PB13</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PB14-constant.html">PB14</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PB15-constant.html">PB15</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PC0-constant.html">PC0</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PC1-constant.html">PC1</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PC2-constant.html">PC2</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PC3-constant.html">PC3</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PC4-constant.html">PC4</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PC5-constant.html">PC5</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PC6-constant.html">PC6</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PC7-constant.html">PC7</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PC8-constant.html">PC8</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PC9-constant.html">PC9</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PC10-constant.html">PC10</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PC11-constant.html">PC11</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PC12-constant.html">PC12</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PC13-constant.html">PC13</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PC14-constant.html">PC14</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PC15-constant.html">PC15</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PD0-constant.html">PD0</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PD1-constant.html">PD1</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PD2-constant.html">PD2</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PD3-constant.html">PD3</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PD4-constant.html">PD4</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PD5-constant.html">PD5</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PD6-constant.html">PD6</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PD7-constant.html">PD7</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PD8-constant.html">PD8</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PD9-constant.html">PD9</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PD10-constant.html">PD10</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PD11-constant.html">PD11</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PD12-constant.html">PD12</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PD13-constant.html">PD13</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PD14-constant.html">PD14</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PD15-constant.html">PD15</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PE0-constant.html">PE0</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PE1-constant.html">PE1</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PE2-constant.html">PE2</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PE3-constant.html">PE3</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PE4-constant.html">PE4</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PE5-constant.html">PE5</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PE6-constant.html">PE6</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PE7-constant.html">PE7</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PE8-constant.html">PE8</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PE9-constant.html">PE9</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PE10-constant.html">PE10</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PE11-constant.html">PE11</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PE12-constant.html">PE12</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PE13-constant.html">PE13</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PE14-constant.html">PE14</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PE15-constant.html">PE15</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PF1-constant.html">PF1</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PF2-constant.html">PF2</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PF3-constant.html">PF3</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PF4-constant.html">PF4</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PF5-constant.html">PF5</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PF6-constant.html">PF6</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PF7-constant.html">PF7</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PF8-constant.html">PF8</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PF9-constant.html">PF9</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PF10-constant.html">PF10</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PF11-constant.html">PF11</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PF12-constant.html">PF12</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PF13-constant.html">PF13</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PF14-constant.html">PF14</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PF15-constant.html">PF15</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PG0-constant.html">PG0</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PG1-constant.html">PG1</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PG2-constant.html">PG2</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PG3-constant.html">PG3</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PG4-constant.html">PG4</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PG5-constant.html">PG5</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PG6-constant.html">PG6</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PG7-constant.html">PG7</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PG8-constant.html">PG8</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PG9-constant.html">PG9</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PG10-constant.html">PG10</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PG11-constant.html">PG11</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PG12-constant.html">PG12</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PG13-constant.html">PG13</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PG14-constant.html">PG14</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PG15-constant.html">PG15</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PH0-constant.html">PH0</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PH1-constant.html">PH1</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PH2-constant.html">PH2</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PH3-constant.html">PH3</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PH4-constant.html">PH4</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PH5-constant.html">PH5</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PH6-constant.html">PH6</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PH7-constant.html">PH7</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PH8-constant.html">PH8</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PH9-constant.html">PH9</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PH10-constant.html">PH10</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PH11-constant.html">PH11</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PH12-constant.html">PH12</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PH13-constant.html">PH13</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PH14-constant.html">PH14</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PH15-constant.html">PH15</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PI0-constant.html">PI0</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PI1-constant.html">PI1</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PI2-constant.html">PI2</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PI3-constant.html">PI3</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PI4-constant.html">PI4</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PI5-constant.html">PI5</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PI6-constant.html">PI6</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PI7-constant.html">PI7</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PI8-constant.html">PI8</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PI9-constant.html">PI9</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PI10-constant.html">PI10</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PI11-constant.html">PI11</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PI12-constant.html">PI12</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PI13-constant.html">PI13</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PI14-constant.html">PI14</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PI15-constant.html">PI15</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PJ0-constant.html">PJ0</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PJ1-constant.html">PJ1</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PJ2-constant.html">PJ2</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PJ3-constant.html">PJ3</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PJ4-constant.html">PJ4</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PJ5-constant.html">PJ5</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PJ6-constant.html">PJ6</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PJ7-constant.html">PJ7</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PJ8-constant.html">PJ8</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PJ9-constant.html">PJ9</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PJ10-constant.html">PJ10</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PJ11-constant.html">PJ11</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PJ12-constant.html">PJ12</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PJ13-constant.html">PJ13</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PJ14-constant.html">PJ14</a></li>
+      <li><a href="stm32.gpio/STM32Pin/PJ15-constant.html">PJ15</a></li>
+    
+    
+    
+      <li class="section-title"><a href="stm32.gpio/STM32Pin-class.html#constructors">Constructors</a></li>
+      <li><a href="stm32.gpio/STM32Pin/STM32Pin.html">STM32Pin</a></li>
+    
+      <li class="section-title">
+        <a href="stm32.gpio/STM32Pin-class.html#instance-properties">Properties</a>
+      </li>
+      <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+      <li><a href="stm32.gpio/STM32Pin/name.html">name</a></li>
+      <li><a href="stm32.gpio/STM32Pin/pin.html">pin</a></li>
+      <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+    
+      <li class="section-title inherited"><a href="stm32.gpio/STM32Pin-class.html#operators">Operators</a></li>
+      <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+    
+      <li class="section-title"><a href="stm32.gpio/STM32Pin-class.html#instance-methods">Methods</a></li>
+      <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="stm32.gpio/STM32Pin/toString.html">toString</a></li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          Dartino libraries 0.5.0-dev.1.5
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+</body>
+
+</html>

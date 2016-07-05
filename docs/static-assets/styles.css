@@ -133,10 +133,6 @@ p {
   margin-bottom: 1em;
 }
 
-p.no-docs {
-  font-style: italic;
-}
-
 a, a:hover {
   color: rgb(0, 102, 152);
 }
@@ -180,6 +176,16 @@ h2 .crossdart {
   float: right;
   font-size: 0.5em;
   margin-top: 1em;
+}
+
+.crossdart-link {
+  border-bottom: 1px solid #dfdfdf;
+  text-decoration: none;
+}
+
+.crossdart-link:hover {
+  border-bottom: 1px solid #aaa;
+  text-decoration: none;
 }
 
 @media(max-width: 768px) {
@@ -226,6 +232,7 @@ header h1 .kind {
   color: #ddd;
   text-transform: uppercase;
   font-size: 15px;
+  display: block;
 }
 
 @media screen and (max-width: 768px) {
@@ -248,7 +255,6 @@ dd.callable, dd.constant, dd.property {
 }
 
 dd p {
-  white-space: nowrap;
   overflow-x: hidden;
   text-overflow: ellipsis;
   margin-bottom: 0;
@@ -739,4 +745,9 @@ form.search {
 section#setter {
   border-top: 1px solid #ddd;
   padding-top: 36px;
+}
+
+li.inherited a {
+  opacity: 0.65;
+  font-style: italic;
 }
